@@ -1,192 +1,5 @@
 <!-- 
-    yapılacaklar
-  
-  img src leri proje içinden çağıralım
-  picture tagini gösterelim
-      <picture>
-      <source media="(min-width: 650px)" srcset="img_food.jpg">
-      <source media="(min-width: 465px)" srcset="img_car.jpg">
-      <img src="img_girl.jpg" style="width:auto;">
-    </picture>
-
-  video tagini gösterelim
-  <video width="320" height="240" autoplay muted loop>
-    <source src="movie.mp4" type="video/mp4">  
-  </video>
-
-6-ul-li 
-https://www.w3schools.com/html/html_lists.asp
-
-listelemek için kullanılır
-Sırasız bir liste <ul> etiketi ile başlar. Her liste öğesi <li> etiketiyle başlar.  
-Liste öğeleri varsayılan olarak madde işaretleri (küçük siyah daireler) ile işaretlenecektir: marked
-<ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>  
-
-
-Sıralı bir liste için ol kullanılır sol tarafına 1 2 3 gibi rakamlar koyar
- <ol type="a">
-
-1	Default. Decimal numbers (1, 2, 3, 4)
-a	Alphabetically ordered list, lowercase (a, b, c, d)
-A	Alphabetically ordered list, uppercase (A, B, C, D)
-i	Roman numbers, lowercase (i, ii, iii, iv)
-I	Roman numbers, uppercase (I, II, III, IV)
-
-<ol>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol>  
-
-
-7-Tablolar
-https://www.w3schools.com/html/html_tables.asp
-
-table tagiyle başlar
-tr satırlar temsil eder
-td colonları temsil eder
-th colon başlılkarını temsil eder en süt satırda yaızlır
-
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-
-
-colspan="2" iki kolon
-
-<table>
-  <tr>
-    <th colspan="2">Company</th>
-    <th>Contact</th> 
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-
-rowspan="2" iki satır
-
-<table>
-  <tr>
-    <th rowspan="2">Company</th>
-    <th>Contact</th> 
-    <th>Contact</th> 
-  </tr>
-  <tr>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-
-
-
-8-favico
-https://www.w3schools.com/html/html_favicon.asp
-browser tablerinde görünen küçük görseldir
-genelde sitenin kök dosyalarında bulunur
-herkes favicon eklesin
-head etiketi içinde genelde title altında yer alır
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-link ile style dosyları vs de çağrılabilir
-
-
-9-text formatter
-https://www.w3schools.com/html/html_formatting.asp
-
-<b> - Bold text
-<strong> - Important text
-<i> - Italic text 
-<del> - Deleted text 
-<sub> - Subscript text
-<sup> - Superscript text
-
-https://www.w3schools.com/html/html_quotation_elements.asp
- 
-
-<q> etiketi kısa bir alıntıyı tanımlar. tırnak işareti ekler
-<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
-
-<abbr> kısaltmalarda kulalnılır
-Kısaltmaları işaretlemek, tarayıcılara, çeviri sistemlerine ve arama motorlarına faydalı bilgiler verebilir.
-<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
- 
-https://www.w3schools.com/html/html_comments.asp
-yorum satırı 
-
-https://www.w3schools.com/html/html_id.asp
-
-HTML kimliği özelliği, bir HTML öğesi için benzersiz bir kimlik belirtmek için kullanılır.
-Bir HTML belgesinde aynı kimliğe sahip birden fazla öğeniz olamaz.
-
-".", "#" css ve js den nasıl ulaştığını anlat
-class ve id arasındaki farkları anlat
-class birden falza kulalnılabilr 
-genelde css ler için class
-js den ulaşmak için id kulanmayı tercih ederiz zorunlu değil
-
-
-
-https://www.w3schools.com/html/html_iframe.asp
-Bir web sayfasını bir web sayfası içinde görüntülemek için bir HTML iframe kullanılır.
-başka bir döküme embed içine gömmek için kulalnılır ödeme sayfaları video gösterme gibi kullanım amaçları vardır
-src="google.com" src attrbiute ile içerik çarğılır
-
-
-https://www.w3schools.com/html/html_scripts.asp
-
-<script> etiketi içinde bir script dosyası çağırmak için yada inline olarka içie js kodu yazmak için kulalnılır
-     <script src="base.js"></script>
-
-<script> öğesi ya kod deyimleri içerir ya da src özniteliği aracılığıyla harici bir komut dosyasına işaret eder.
-
-    bir kaç tane js örneği yap
- 
-    https://www.w3schools.com/html/html_head.asp
-    head etikeine yazılacak elementler anlatılacak
-
-    https://www.w3schools.com/html/html_responsive.asp
-    https://www.w3schools.com/html/html5_semantic_elements.asp
-    https://www.w3schools.com/html/html_entities.asp
-
-    <meta charset="utf-8">
-    Bir HTML sayfasını doğru bir şekilde görüntülemek için, bir web tarayıcısının hangi karakter setini kullanacağını bilmesi gerekir.
-
-  utf-8  10k karakter desteği vardır
-  ASCII defined 128 different characters
-  ISO-8859-1 was the default character set for HTML 4
-https://www.w3schools.com/html/html5_svg.asp
-
-
+   
 https://www.w3schools.com/html/html_forms.asp
 https://www.w3schools.com/html/html_forms_attributes.asp
 https://www.w3schools.com/html/html_form_elements.asp
@@ -194,4 +7,199 @@ https://www.w3schools.com/html/html_form_input_types.asp
 https://www.w3schools.com/html/html_form_attributes.asp
 
  
+formlar bittikten sonra bunlarada göz atalım
+https://www.w3schools.com/tags/default.asp
+
+CSS
+
+CSS, bir HTML belgesine stil vermek için kullandığımız dildir. html öğelerinin ekranda nasıl görüenceğini söyler
+
+1--Syntax
+ CSS kuralı, bir seçici ve bir bildirim bloğundan oluşur.
+ yani 
+ Bir seçici ve bir bildirim bloğundan oluşur
+ Seçici ve Tanımlama
+ tanımlama ise property:value şeklinde yazılır
+ 
+2--CSS Selectors
+ stil vermek istediğiniz HTML öğelerini seçer.
+ tag,id,class
+ class.class veya #id.class veya .class#id.class
+ parent child ilişkisi bitişik yazma konusu ayrıntılı açıklanmalı
+ (*) ne işe yarar
+ virgül ne işe yarar
+ 
+3--How To Add CSS
+ External CSS =>  dış dosyaya yazılmış cssi çağırma
+ Internal CSS => head etiketi içinde style açarak css yazma
+ Inline CSS => html de element üzerinde stilleme yapma dezavantajı tüm css özelliklerini kullanamamk reponsive media query parent child ilişkileri
+ 
+4-Cascading Order
+  Bir HTML öğesi için birden fazla stil belirtildiğinde hangi stil kullanılacak?
+  Inline style (inside an HTML element) => en yüksek önceliğe sahiptir
+  External and internal style sheets (in the head section) 
+  Browser default => en düşük öncelik
+  !important kavramı anlatılacak
+5- CSS Colors
+  CSS Background Color
+  CSS Text Color
+  CSS Color Values
+  CSS'de renkler  HEX değerleri, RGB değerleri, RGBA değerleri ve HSL değerleri, HSLA değerleri kullanılarak da belirtilebilir:
+ 
+6-CSS Backgrounds
+  background-color: yellow;
+  opacity:0.3; 
+  background: rgba(0, 128, 0, 0.3) /* Green background with 30% opacity */
+  rgba vs opacity farkları
+  background-image: url("paper.gif");
+  background-repeat: repeat-x;  "no-repeat;","repeat-x"..
+  background-position top right center bottom left
+
+7-CSS Borders
+  width,color, dotted,dashed,solid  önemlileri dene
+  border border-bottom border-radius vs 
+ 
+
+8-CSS Margins
+  margin: 25px 50px 75px 100px;
+  margin-top vs 
+  margin: auto;
+
+9-CSS Paddings
+  padding: 25px 50px 75px 100px;
+  padding-top vs 
+
+10-CSS Height, Width and Max-width
+ 
+11-The CSS Box Model
+  https://www.w3schools.com/css/css_boxmodel.asp 
+  burdaki görseli göster
+  gün sonundaki toplam width hegit hesabını göster
+
+12-CSS Text (Typograph)
+  color: blue;
+  text-align: center; //left // right
+  text-decoration  https://www.w3schools.com/css/css_text_decoration.asp
+  text-transform: uppercase; //lowercase capitalize
+  letter-spacing: 5px;
+  line-height: 0.8;
+  white-space: nowrap;
+  text-shadow: 2px 2px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 40px;
+
+  //fontlar google'dan veya dışkaynaklardan inclue edildiği gibi font family dosyası proje içinden dahil edilebilir
+   genelde .ttf .otf uzantılı dosylar tanımlamalar nasıl yapılır gösterilecek 
+
+13-Styling Links
+   
+  a:link - a normal, unvisited link
+  a:visited - a link the user has visited
+  a:hover - a link when the user mouses over it
+  a:active - a link the moment it is clicked
+
+  <span style="cursor: auto">auto</span><br>
+  <span style="cursor: crosshair">crosshair</span><br>
+  <span style="cursor: default">default</span><br>
+  <span style="cursor: e-resize">e-resize</span><br>
+  <span style="cursor: help">help</span><br>
+  <span style="cursor: move">move</span><br>
+  <span style="cursor: n-resize">n-resize</span><br>
+  <span style="cursor: ne-resize">ne-resize</span><br>
+  <span style="cursor: nw-resize">nw-resize</span><br>
+  <span style="cursor: pointer">pointer</span><br>
+  <span style="cursor: progress">progress</span><br>
+  <span style="cursor: s-resize">s-resize</span><br>
+  <span style="cursor: se-resize">se-resize</span><br>
+  <span style="cursor: sw-resize">sw-resize</span><br>
+  <span style="cursor: text">text</span><br>
+  <span style="cursor: w-resize">w-resize</span><br>
+  <span style="cursor: wait">wait</span>
+
+14--The display Property 
+  display: none;
+  display: inline;  =>  elementin heigt değeri yanında elementlerin heigt değerine bağlıdır yanyana koyamya olanak sağlar
+  display: inline-block => elementleri inline gibi yanyana koyar ve heigt değerlerini korumasına olanak verir 
+  display: block;  
+  display:none or visibility:hidden arasındaki farklar
+
+15--The position Property
+  static => default değerdir
+  relative =>parent element ile ilişkili olarak pozisyonlanır bir üst elementine bağımlılığı vardır
+  fixed => sabit görünüm alanında konumlanır yani sayfa scroll olsa bile sabit yerde kalır. parent child ilişkisi biter ekranın koordinat düzelmini kullanır
+  absolute => koordinat düzleminde istediğimiz konuma yerleştirebiliriz right top =0 defualt değer alır 
+  sticky => scroll olduğunda konumunu korur. bulunduğu konuma yapışır. ilişkisi olduğu parent element içinde bu davranışı sergiler. 
+            parent element scroll ile ekran dışına çıkarsa  sticky elementde parnetı ile beraber ekrandan kaybolur 
+
+16-The z-index Property
+
+17-CSS Overflow
+  visible - Default.  değer
+  hidden -  gizler
+  scroll - her durumda scroll barlar görünür
+  auto - ihtiyaç olduğunda scrollbarlar görünür
+  overflow, overflow-x,overflow-y
+
+18-CSS Combinators
+  descendant selector (space) => çocukları 
+  child selector (>) => bir alt seviye
+  general sibling selector => (~) kardeş
+  Adjacent Sibling Selector (+) => div + p demek div elementinden sonra gelen ilk kardeş p elementi 
+
+19--All CSS Pseudo Classes
+  :active	a:active	Selects the active link
+  :checked	input:checked	Selects every checked <input> element
+  :disabled	input:disabled	Selects every disabled <input> element
+  :empty	p:empty	Selects every <p> element that has no children
+  :enabled	input:enabled	Selects every enabled <input> element
+  :first-child	p:first-child	Selects every <p> elements that is the first child of its parent
+  :first-of-type	p:first-of-type	Selects every <p> element that is the first <p> element of its parent
+  :focus	input:focus	Selects the <input> element that has focus
+  :hover	a:hover	Selects links on mouse over
+  :in-range	input:in-range	Selects <input> elements with a value within a specified range
+  :invalid	input:invalid	Selects all <input> elements with an invalid value
+  :lang(language)	p:lang(it)	Selects every <p> element with a lang attribute value starting with "it"
+  :last-child	p:last-child	Selects every <p> elements that is the last child of its parent
+  :last-of-type	p:last-of-type	Selects every <p> element that is the last <p> element of its parent
+  :link	a:link	Selects all unvisited links
+  :not(selector)	:not(p)	Selects every element that is not a <p> element
+  :nth-child(n)	p:nth-child(2)	Selects every <p> element that is the second child of its parent
+  :nth-last-child(n)	p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
+  :nth-last-of-type(n)	p:nth-last-of-type(2)	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+  :nth-of-type(n)	p:nth-of-type(2)	Selects every <p> element that is the second <p> element of its parent
+  :only-of-type	p:only-of-type	Selects every <p> element that is the only <p> element of its parent
+  :only-child	p:only-child	Selects every <p> element that is the only child of its parent
+  :optional	input:optional	Selects <input> elements with no "required" attribute
+  :out-of-range	input:out-of-range	Selects <input> elements with a value outside a specified range
+  :read-only	input:read-only	Selects <input> elements with a "readonly" attribute specified
+  :read-write	input:read-write	Selects <input> elements with no "readonly" attribute
+  :required	input:required	Selects <input> elements with a "required" attribute specified
+  :root	root	Selects the document's root element
+  :target	#news:target	Selects the current active #news element (clicked on a URL containing that anchor name)
+  :valid	input:valid	Selects all <input> elements with a valid value
+  :visited	a:visited	Selects all visited links
+
+20--All CSS Pseudo Elements
+  ::after	p::after	Insert something after the content of each <p> element
+  ::before	p::before	Insert something before the content of each <p> element
+  ::first-letter	p::first-letter	Selects the first letter of each <p> element
+  ::first-line	p::first-line	Selects the first line of each <p> element
+  ::marker	::marker	Selects the markers of list items
+  ::selection	p::selection	Selects the portion of an element that is selected by a user
+
+21--
+CSS [attribute] Selector
+CSS [attribute="value"] Selector
+CSS [attribute~="value"] Selector  => [title~="flower"] title'ın değerinde flower var ise seçer
+CSS [attribute|="value"] Selector  => [class|="top"] class'ın değeri top gelimesi ile başlıyor ise seçer
+CSS [attribute^="value"] Selector  => [class^="top"] class'ın değeri top gelimesi ile başlıyor ise seçer
+CSS [attribute$="value"] Selector  => [class$="top"] class'ın değeri top gelimesi ile bitiyor ise seçer
+CSS [attribute*="value"] Selector  => [class*="top"] class'ın değerinde top gelimesi varmı diye bakar varsa seçer
+
+ 
+
+
+
+https://www.w3schools.com/css/css_form.asp burda kaldık
  -->
