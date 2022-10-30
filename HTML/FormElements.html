@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicons/favicon.png">
-    <link rel="stylesheet" href="content/css/base.css">
-
+   
     <title>FormElems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,12 +21,18 @@
     <div class="content">
 
         <form action="result.html" method="get" id="form">
+
+            <input type="hidden" id="userId" name="userId" value="3487">
+            <!-- shift + alt + f kodları düzenliyor
+                 backend'e bilgi gönderirken kullanılır 
+                bu bilgiyi kullanıcı ön tarafta görmesine gerek yoktur -->
             <label for="name">First name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+            <input required type="text" id="name" name="name" placeholder="adınızı giriniz"><br><br>
+            <!-- required zorunlu alan -->
             <label for="pwd">Password:</label><br>
-            <input type="password" id="pwd" name="pwd"><br><br>
+            <input required type="password" id="pwd" name="pwd"><br><br>
             <label for="lastname">Last name:</label><br>
-            <input type="text" id="lastname" name="lastname"><br><br>
+            <input readonly type="text" id="lastname" name="lastname"><br><br>
             <label for="cars">Choose a car:</label>
 
             <select id="cars" name="cars">
@@ -42,7 +47,7 @@
             <textarea id="message" name="message" rows="5">test</textarea>
 
             <div>
-                  <input type="radio" id="html" name="fav_language" value="HTML">
+                  <input class="rba-A" type="radio" id="html" name="fav_language" value="HTML">
                   <label for="html">HTML</label><br>
                   <input type="radio" id="css" name="fav_language" value="CSS">
                   <label for="css">CSS</label><br>
@@ -50,16 +55,16 @@
                   <label for="javascript">JavaScript</label><br><br>
             </div>
             <div>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <input type="checkbox" checked id="vehicle1" name="vehicle1" value="Bike">
                 <label for="vehicle1"> I have a bike</label><br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <input type="checkbox" checked id="vehicle2" name="vehicle2" value="Car">
                 <label for="vehicle2"> I have a car</label><br>
                 <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
                 <label for="vehicle3"> I have a boat</label>
             </div>
             <label for="myfile">Select a file:</label>
             <input type="file" id="myfile" accept=".png" name="myfile" multiple><br><br>
-
+            <!-- accept dosya formatları -->
             <br><br>
             <div>
                 <input type="submit" value="Submit">
@@ -67,7 +72,7 @@
                 <!-- input type="submit" ile button type="submit" 
                     formu doğrudan request atar -->
 
-                <!-- <a href="#" onclick="submitform()">Gönder</a> -->
+                <a href="#" onclick="submitform()">Gönder</a>
                 <!-- <button type="button" onclick="submitform()">Gönder</button> -->
                 <!-- a tagi ve button type="button"  formu async request atar
                 yani bir js fonskiyonu çağırırız o fonksiyon formumuzu submit eder -->
@@ -79,6 +84,9 @@
         <div style="height: 300px;"></div>
     </div>
     <script src="content/js/base.js"></script>
+    <script>
+        var userId = "3487";
+    </script>
 </body>
 
 </html>

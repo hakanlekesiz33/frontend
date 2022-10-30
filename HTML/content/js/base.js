@@ -17,6 +17,7 @@ function submitform() {
     //validation kontrol edilecek
     var isValid = true;
     if (isValid) {
+        debugger
         document.getElementById("form").submit();
 
     }
