@@ -4,6 +4,24 @@
     position: relative;
 }
 
+@font-face {
+    font-family: 'times-new';
+    font-weight: 500;
+    src: url(FONT_FILE_NAME_500.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'times-new';
+    font-weight: 700;
+    src: url(FONT_FILE_NAME_700.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'times-new';
+    font-weight: 900;
+    src: url(FONT_FILE_NAME_900.woff2) format('woff2');
+}
+
 body {
     display: flex;
     padding-bottom: 300px;
@@ -17,54 +35,125 @@ body {
     flex-direction: column;
     padding: 20px;
     position: fixed;
+    background-image: url("../images/car.jpg");
+    background-repeat: no-repeat;
+    /* image sığmıyorsa default tekrarlanıyor bunu engelliyoruz */
+    background-position: center;
+
 }
 
-.navbar a{
+.navbar a {
     display: flex;
     margin-bottom: 5px;
+    color: aqua;
+    /* HEX siyah renk */
+    color: rgba(0, 0, 0, 0.5);
+    /* RGBA siyah renk rengin opak değeri yüzde 50*/
+    opacity: 0.5;
+    /* ctrl+k+c rgba'daki a değeri ile opacity değerini belirliyoruz */
+    transition: color 0.25s;
+
+
+
+}
+
+.navbar a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+.navbar a:visited {
+    color: blue;
+}
+
+
+h1 {
+    padding: 20px 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    line-height: 0.8;
+    white-space: nowrap;
+    /* text-shadow: 2px 2px; */
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'times-new';
+    font-weight: 700;
+}
+
+
+.navbar ul li {
+    margin-bottom: 5px;
+    border: 1px solid red;
+    border-radius: 10px;
+    border-bottom-color: blue;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 10px;
+    /* 4 köşe için */
+    /* padding: 10px 5px; */
+    /* padding: 10px 5px 7px; */
+    /* 4 köşe içine 1. parametre(10px) alt ve üst için 
+    2. parametre(5px) sağ ve sol için */
+    /* padding: 5px 10px 15px 20px; */
+    /* 4 köşenin değerleri ayrı ayrı yazıyor 1. parametre(üst) 2. sağ 3. bottom 4. left
+    saat yönünde takip eder */
+    /* padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    min-width: 50px;  */
+    /* height: 50px; */
+    /* min-height: 50px; */
+    /* max-height: 50px; */
+    /* display: inline-block; */
 }
 
 .content {
-    margin-left: 250px; 
-    width: calc(100% - 200px); 
+    margin-left: 250px;
+    width: calc(100% - 200px);
 
 }
 
-.content >div{
+.content>div {
     margin-bottom: 100px;
 
 }
 
-table tr th,table tr td {
+table tr th,
+table tr td {
     padding: 5px;
     border: 1px solid #ccc;
 }
-#textFormatter{
+
+#textFormatter {
     background-color: aqua;
 }
-#textFormatter.red{
+
+#textFormatter.red {
     background-color: red;
 
 }
-#textFormatter.green{
+
+#textFormatter.green {
     background-color: green;
 
 }
 
-iframe{
-   width: 500px;
-   height: 500px; 
+iframe {
+    width: 500px;
+    height: 500px;
 }
 
 @media screen and (max-width: 800px) {
-    #textFormatter{
+    #textFormatter {
         background-color: blue;
     }
-  }
+}
 
-  @media screen and (max-width: 500px) {
-    iframe{
+@media screen and (max-width: 500px) {
+    iframe {
         width: 200px;
-        height: 500px; 
-     }
-  }
+        height: 500px;
+    }
+}
