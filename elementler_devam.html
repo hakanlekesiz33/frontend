@@ -149,45 +149,19 @@ font-family: "Times New Roman", Times, serif;
   Adjacent Sibling Selector (+) => div + p demek div elementinden sonra gelen ilk kardeş p elementi 
 
 19--All CSS Pseudo Classes
-  :active	a:active	Selects the active link
   :checked	input:checked	Selects every checked <input> element
   :disabled	input:disabled	Selects every disabled <input> element
-  :empty	p:empty	Selects every <p> element that has no children
-  :enabled	input:enabled	Selects every enabled <input> element
   :first-child	p:first-child	Selects every <p> elements that is the first child of its parent
-  :first-of-type	p:first-of-type	Selects every <p> element that is the first <p> element of its parent
   :focus	input:focus	Selects the <input> element that has focus
   :hover	a:hover	Selects links on mouse over
-  :in-range	input:in-range	Selects <input> elements with a value within a specified range
-  :invalid	input:invalid	Selects all <input> elements with an invalid value
-  :lang(language)	p:lang(it)	Selects every <p> element with a lang attribute value starting with "it"
   :last-child	p:last-child	Selects every <p> elements that is the last child of its parent
-  :last-of-type	p:last-of-type	Selects every <p> element that is the last <p> element of its parent
-  :link	a:link	Selects all unvisited links
   :not(selector)	:not(p)	Selects every element that is not a <p> element
   :nth-child(n)	p:nth-child(2)	Selects every <p> element that is the second child of its parent
   :nth-last-child(n)	p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
-  :nth-last-of-type(n)	p:nth-last-of-type(2)	Selects every <p> element that is the second <p> element of its parent, counting from the last child
-  :nth-of-type(n)	p:nth-of-type(2)	Selects every <p> element that is the second <p> element of its parent
-  :only-of-type	p:only-of-type	Selects every <p> element that is the only <p> element of its parent
-  :only-child	p:only-child	Selects every <p> element that is the only child of its parent
-  :optional	input:optional	Selects <input> elements with no "required" attribute
-  :out-of-range	input:out-of-range	Selects <input> elements with a value outside a specified range
-  :read-only	input:read-only	Selects <input> elements with a "readonly" attribute specified
-  :read-write	input:read-write	Selects <input> elements with no "readonly" attribute
-  :required	input:required	Selects <input> elements with a "required" attribute specified
-  :root	root	Selects the document's root element
-  :target	#news:target	Selects the current active #news element (clicked on a URL containing that anchor name)
-  :valid	input:valid	Selects all <input> elements with a valid value
-  :visited	a:visited	Selects all visited links
-
-20--All CSS Pseudo Elements
   ::after	p::after	Insert something after the content of each <p> element
   ::before	p::before	Insert something before the content of each <p> element
   ::first-letter	p::first-letter	Selects the first letter of each <p> element
   ::first-line	p::first-line	Selects the first line of each <p> element
-  ::marker	::marker	Selects the markers of list items
-  ::selection	p::selection	Selects the portion of an element that is selected by a user
 
 21--
 CSS [attribute] Selector
@@ -198,7 +172,7 @@ CSS [attribute^="value"] Selector  => [class^="top"] class'ın değeri top gelim
 CSS [attribute$="value"] Selector  => [class$="top"] class'ın değeri top gelimesi ile bitiyor ise seçer
 CSS [attribute*="value"] Selector  => [class*="top"] class'ın değerinde top gelimesi varmı diye bakar varsa seçer
 
- 22- https://www.w3schools.com/css/css_form.asp
+22- https://www.w3schools.com/css/css_form.asp
  Focused Inputs
 Input with icon/image
 Animated Search Input
@@ -210,7 +184,7 @@ Animated Search Input
     vh, vw
     %
     calc
-     !important
+    !important
 24-
 https://www.w3schools.com/css/css3_borders.asp
 border-radius lar
@@ -231,15 +205,27 @@ border-radius lar
   gerçek projede font ekleyecez
 
   29-
-  translate()
-  rotate()
-  scaleX()
-  scaleY()
+  transform:translate(50px, 50px); x y kooridnatların 50 px yer değiştirir
+  transform:translateY(50px); y kooridnatlarında
+  transform:translateX(50px); x kooridnatlarında
+  transform:rotate(45deg); elementi 45derece çevirir
+  transform:scale(1.5); elementi x ve y düzleminde yüzde 50 büyültür 
+  transform:scale(0.5); elementi x ve y düzleminde yüzde 50 küçültür 
+  transform:scaleX(1.5); elementi x  düzleminde yüzde 50 büyültür 
+  transform:scaleY(1.5); elementi y  düzleminde yüzde 50 büyültür 
+  
 
   30-
+ 
+  transition: width 2s linear 1s,heigt 2s linear 1s; 
+  
+  width(1) 2s(2) linear(3) 1s(4) 4 parametre vardır
+  1-1. parametre hangi özelliği takip edeceğimizi veriyor
+  2- 2. parametreye süreyi yazıyoruz geçişin kaç sn süreceğini beliritiyoruz
+  3- geçişin hangi animasyon tipinde yapılacağını belirtir
+  4- geçişin bekleme süresi
 
-  transition
-  transition: width 2s linear 1s;
+  elementin her width değişimini li
 
   31-
   https://www.w3schools.com/css/css3_animations.asp
@@ -247,8 +233,6 @@ border-radius lar
 
   32-
   object-fit:
-
-  33-
   object-position
 
   34-
@@ -256,6 +240,8 @@ https://www.w3schools.com/css/css3_variables.asp
 
 35-
   box-sizing: border-box;
+  elemente verilen padding, border gibi genişlikleri 
+  elementin dışına değilde içine eklemesini sağlar
 36-
 
 /* 767px ve altı */

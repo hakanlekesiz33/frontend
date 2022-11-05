@@ -1,0 +1,255 @@
+:root {
+    --blue: #4281ca;
+    --bluergb: rgba(0 0 0 0);
+    --white: #ffffff;
+}
+
+
+/* .c-item{
+    margin-top: 250px;
+    position: relative;
+}
+
+.c-item-01-A{
+    position: fixed;
+    top: 0;
+    right: 0;
+} */
+
+/* 1. senaryo */
+
+body {
+    font-size: 16px;
+    background-color: var(--blue);
+}
+
+.c-container-05 .c-item {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: var(--blue);
+
+
+}
+
+.c-container-05 .c-item .c-item-01 {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+    background-color: blanchedalmond;
+    transition: transform 2s linear 1s;
+    transform: translate(100px, 50px);
+}
+
+.c-container-05 .c-item h1 {
+    text-shadow: 2px 2px;
+}
+
+
+.c-container-05 .c-item .c-item-02 {
+    width: 100%;
+    height: 100%;
+
+}
+
+.c-container-05 .c-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+
+}
+
+
+.c-container-01 {
+    height: 2000px;
+    width: 300px;
+    background-color: aqua;
+}
+
+.c-container-02 {
+    height: 1000px;
+    width: 300px;
+    background-color: red;
+}
+
+.c-container-02 .title {
+    position: sticky;
+    color: white;
+    font-size: 30px;
+    top: 27px;
+    left: 50px;
+}
+
+.c-container-03 {
+    height: 500px;
+    width: 300px;
+    background-color: blue;
+}
+
+.c-container-03 p {
+    color: azure;
+    font-size: 16px;
+    overflow-y: auto;
+    /* dikeyde scroll */
+    overflow-x: auto;
+    /* yatayda scroll */
+    overflow: auto;
+    /* her iki eksende scroll */
+    /* auto ihtiyaç halinde görünür
+       scroll her durumda görünür   
+    */
+    /* overflow: hidden; fazle olan içeriği gizler */
+}
+
+.c-container-04 .c-item {
+    color: red;
+    font-size: 30px;
+}
+
+.c-container-04>.c-item {
+    color: blue;
+    font-size: 30px;
+    background-color: aqua;
+}
+
+.c-container-04 .c-unit {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+.c-container-04 .c-item:hover~.c-unit {
+    background-color: green;
+
+}
+
+.c-container-06 span+p {
+    color: red;
+}
+
+/* 
+.c-container-07 p:not(:last-child) {
+    color: red;
+
+}
+
+.c-container-07 p:not(.green) {
+    color: red;
+
+}
+
+.c-container-07 p:nth-child(2n) {
+    color: red;
+
+}
+
+.c-container-07 p:nth-last-child(2) {
+    color: red;
+
+} 
+*/
+.c-container-07 p {
+    width: 200px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.c-container-07 p::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2.5px);
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+
+}
+
+.c-container-07 p:first-letter {
+    color: red;
+}
+
+.c-container-07 p::first-line {
+    color: blue;
+}
+
+.c-container-07 p[title*="flower"] {
+    background-color: aqua;
+}
+
+input[type=text]:focus {
+    border: 2px solid red;
+
+}
+
+.c-container-07 {
+    font-size: 32px;
+}
+
+.c-container-07 p:last-child {
+    font-size: 2em;
+    /*  font-size 64px olur çünkü bir üst parentındaki fontsize bakıyor */
+
+}
+
+.c-container-07 p:first-child {
+    font-size: 2rem;
+    /*  font-size 32px olur çünkü body fontsize bakıyor */
+
+}
+
+.container-09 img {
+    height: 100vh;
+    /* ekranın yüksekliği viewport heigt */
+    width: 100vw;
+    /* ekranın genişliği viewport width */
+}
+
+.c-container-08 {
+    width: 300px;
+    height: 200px;
+    background: white;
+    box-shadow: 0px 4px 12px -4px rgba(34, 31, 68, 0.12);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.c-container-10 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.c-container-10 div {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+}
+
+.c-container-10 div:not(:last-child) {
+   margin-right: 15px;
+   margin-bottom: 15px;
+}
+
+
+/* mobil */
+@media screen and (max-width: 767px) {
+    .c-container-08 {
+        width: 200px;
+        height: 100px;
+    }
+    .c-container-10 {
+        flex-direction: column;
+    }
+}
+ 
