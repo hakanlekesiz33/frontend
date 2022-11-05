@@ -1,0 +1,60 @@
+﻿@import "../../Base/Global.scss";
+@import "../../Base/Colour.scss";
+
+
+/* Default xs1,sm ,md ,lg */
+
+
+/* Common xs1, xs2 */
+@media all and (max-width: #{($mq-sm1 - 1) + "px"}) {
+    .section-05 {
+        background: #FFFFFF;
+        padding: 48px 0 48px 0;
+
+        .c-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            > .c-item-01 {
+                width:315px;
+                margin-bottom: 16px;
+            }
+
+            > .c-item-02 {
+                width: 315px;
+            }
+
+            > .c-item-03 {
+                margin-top: 32px;
+           
+            }
+        }
+    }
+}
+
+/* Common sm, md, lg */
+@media all and (min-width: #{$mq-sm1 + "px"}) {
+    .section-05 {
+        background: #FFFFFF;
+        padding:96px 0 80px 0;
+
+        .c-wrapper {
+            display:flex;
+            align-items:center;
+            flex-direction:column;
+
+            >.c-item-01{
+                width:836px;
+                margin-bottom:16px;
+                text-align:center;
+            }
+            >.c-item-02{
+                width:620px;
+
+            }
+            >.c-item-03{
+                margin-top:64px;
+            }
+        }
+    }
+}

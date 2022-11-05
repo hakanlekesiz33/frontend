@@ -1,0 +1,84 @@
+/* Neutral */
+/* Accent */
+/* System */
+/* Information */
+/* Warning */
+/* Success */
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .section-03 {
+    padding: 48px 0;
+    background: #F5F5F5;
+  }
+  .section-03 .c-wrapper .c-container-01 {
+    margin-bottom: 32px;
+  }
+  .section-03 .c-wrapper .c-container-01 > .c-item-01 {
+    margin-bottom: 32px;
+  }
+  .section-03 .c-wrapper .c-container-01 > .c-item-01 > svg {
+    width: 60px;
+    height: 60px;
+  }
+  .section-03 .c-wrapper .c-container-01 > .c-item-02 {
+    width: calc(100% - 20px);
+    margin-bottom: 16px;
+  }
+  .section-03 .c-wrapper .c-container-01 > .c-item-03 {
+    width: calc(100% - 20px);
+  }
+  .section-03 .c-wrapper .c-container-02 {
+    display: flex;
+  }
+  .section-03 .c-wrapper .c-container-03 {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+  }
+  .section-03 .owl-carousel.owl-theme .owl-stage-outer {
+    width: calc(100% + 40px);
+    margin: 0 0 0 -20px;
+    padding-left: 20px;
+  }
+  .section-03 .owl-carousel.owl-theme {
+    width: calc(100% + 40px);
+    margin: 0 0 0 -20px;
+    padding-left: 20px;
+  }
+}
+/* Common sm, md, lg */
+@media all and (min-width: 768px) {
+  .section-03 {
+    padding: 96px 0 120px 0;
+    border-radius: 80px;
+    background: #F5F5F5;
+  }
+  .section-03 .c-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .section-03 .c-wrapper .c-container-01 {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-03 .c-wrapper .c-container-01 > .c-item-01 {
+    margin-bottom: 48px;
+  }
+  .section-03 .c-wrapper .c-container-01 > .c-item-02 {
+    width: 836px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .section-03 .c-wrapper .c-container-02 {
+    display: grid !important;
+  }
+  .section-03 .c-wrapper .c-container-03 {
+    width: 296px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=Section03.css.map */

@@ -1,0 +1,133 @@
+/* Neutral */
+/* Accent */
+/* System */
+/* Information */
+/* Warning */
+/* Success */
+/* Default xs1,sm ,md ,lg */
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .section-08 {
+    background: #FFFFFF;
+    padding: 32px 0 40px 0;
+  }
+  .section-08 .c-wrapper {
+    display: flex;
+  }
+  .section-08 .c-wrapper .c-container-01 {
+    display: none;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-01 {
+    margin: 0 20px 24px 0;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul {
+    margin-bottom: 60px;
+    margin-right: 12px;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul > li {
+    padding-left: 24px;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul > li:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cpath%20d%3D%22M10.7812%207.33312L7.20517%203.75712L8.14784%202.81445L13.3332%207.99979L8.14784%2013.1851L7.20517%2012.2425L10.7812%208.66645H2.6665V7.33312H10.7812Z%22%20fill%3D%22black%22%2F%3E%20%3C%2Fsvg%3E%20");
+    background-repeat: no-repeat;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-03 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-03 .c-unit-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 20px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-03 .c-unit-01:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+/* Common sm, md, lg */
+@media all and (min-width: 768px) {
+  .section-08 {
+    background: #FFFFFF;
+    padding: 80px 0 120px 0;
+  }
+  .section-08 .c-wrapper {
+    display: flex;
+  }
+  .section-08 .c-wrapper .c-container-01 {
+    margin-right: 160px;
+  }
+  .section-08 .c-wrapper .c-container-01 .c-item-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  .section-08 .c-wrapper .c-container-01 .c-item-01:hover {
+    background: #000000;
+  }
+  .section-08 .c-wrapper .c-container-01 .c-item-01:hover path {
+    fill: #D8FF00;
+  }
+  .section-08 .c-wrapper .c-container-01 .c-item-01:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-01 {
+    width: 836px;
+    margin-bottom: 48px;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul {
+    margin-bottom: 60px;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul > li {
+    padding-left: 36px;
+    width: 752px;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul > li:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cpath%20d%3D%22M13.4768%209.16689L9.00683%204.69689L10.1852%203.51855L16.6668%2010.0002L10.1852%2016.4819L9.00683%2015.3036L13.4768%2010.8336H3.3335V9.16689H13.4768Z%22%20fill%3D%22black%22%2F%3E%20%3C%2Fsvg%3E%20");
+    background-repeat: no-repeat;
+  }
+  .section-08 .c-wrapper .c-container-02 > ul > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-03 {
+    display: flex;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-03 .c-unit-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 4px 20px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    color: #000000;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+  }
+  .section-08 .c-wrapper .c-container-02 .c-item-03 .c-unit-01:not(:last-child) {
+    margin-right: 8px;
+  }
+}/*# sourceMappingURL=Section08.css.map */

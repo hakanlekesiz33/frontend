@@ -1,0 +1,17 @@
+@import "Global.scss";
+@import "Colour.scss";
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+
+    &.noscroll {
+        position: fixed;
+        width: 100%;
+        overflow-y: scroll;
+    }
+}
+  

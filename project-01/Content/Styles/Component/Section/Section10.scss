@@ -1,0 +1,87 @@
+﻿@import "../../Base/Global.scss";
+@import "../../Base/Colour.scss";
+
+
+/* Default xs1,sm ,md ,lg */
+
+
+/* Common xs1, xs2 */
+@media all and (max-width: #{($mq-sm1 - 1) + "px"}) {
+    .section-10 {
+        background: $neutral-025;
+        padding: 48px 0 48px 0;
+
+        .c-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            > .c-item-01 {
+                width: 60px;
+                height: 60px;
+            }
+
+            > .c-item-02 {
+                width: 315px;
+                margin-top: 32px;
+            }
+
+            > .c-item-03 {
+                width: 315px;
+                margin-top: 16px;
+            }
+
+            > .c-item-04 {
+                display: flex;
+                margin-top: 32px;
+            }
+
+            .owl-carousel.owl-theme .owl-stage-outer {
+                width: calc(100% + 40px);
+                margin: 0 0 0 -20px;
+                padding-left: 20px;
+            }
+
+            .owl-carousel.owl-theme {
+                width: calc(100% + 40px);
+                margin: 0 0 0 -20px;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+/* Common sm, md, lg */
+@media all and (min-width: #{$mq-sm1 + "px"}) {
+    .section-10 {
+        background: $neutral-025;
+        padding: 96px 0 120px 0;
+
+        .c-wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            > .c-item-01 {
+                width: 84px;
+                height: 84px;
+            }
+
+            > .c-item-02 {
+                width: 836px;
+                margin-top: 48px;
+                text-align: center;
+            }
+
+            > .c-item-03 {
+                width: 620px;
+                margin-top: 16px;
+                text-align: center;
+            }
+
+            > .c-item-04 {
+                display: flex;
+                margin-top: 64px;
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+//
+//
+// media query values
+//
+$mq-xs1: 0;
+$mq-xs2: 420;
+$mq-sm1: 768;
+$mq-sm2: 1024;
+$mq-md: 1180;
+$mq-lg: 1680;
+$mq-xl: 1920;
+//
+//
+// device pixel ratio ranges
+//
+$px-ratio-zoom110-min: 1.01;
+$px-ratio-zoom110-max: 1.10;
+$px-ratio-zoom125-min: 1.11;
+$px-ratio-zoom125-max: 1.49;
+$px-ratio-zoom150-min: 1.50;
+$px-ratio-zoom150-max: 1.99;
+//
+//
+// zoom level values
+//
+$zoom-md-110: 0.95;
+$zoom-md-125: 0.9;
+$zoom-md-150: 0.8;
+//
+//
+// view height values based on zoom levels
+//
+$vH-md-110: #{(100 / $zoom-md-110) + "vH"};
+$vH-md-125: #{(100 / $zoom-md-125) + "vH"};
+$vH-md-150: #{(100 / $zoom-md-150) + "vH"};
+//
+//
+// c-wrapper width values:
+//
+$c-wrapper-xs1-width: calc(100% - 40px);
+$c-wrapper-xs2-width: calc(100% - 40px);
+$c-wrapper-sm1-width: 1268;
+$c-wrapper-sm2-width: 1268;
+$c-wrapper-md-width: 1268;
+$c-wrapper-lg-width: 1268;
+$c-wrapper-xl-width: 1268;
+//
+//
+//
+// .dsp-no-wrapper:
+// --------------
+// $mq --> media query
+// $wrPullBack --> how many px to pull current element back
+@mixin dsp-no-wrapper($mq, $wrPullBack) {
+    .dsp-no-wrapper-#{$mq}-wr#{$wrPullBack} {
+        width: calc(100% + #{$wrPullBack*2}px);
+        margin: 0 0 0 -#{$wrPullBack}px;
+    }
+}
+//
+//
+//
+// .dsp-overflow:
+// --------------
+// $mq --> media query
+// $wrPullBack --> how many px to pull wrapper back (c-wrapper)
+// $mcW --> micro component width
+// $mcG --> micro component x gutter
+@mixin dsp-overflow($mq, $wrPullBack, $mcW, $mcG) {
+    .dsp-overflow-#{$mq}-wr#{$wrPullBack}-comp#{$mcW}-#{$mcG} {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        flex-shrink: 0;
+        width: calc(100% + #{$wrPullBack*2}px);
+        margin: 0 0 0 -#{$wrPullBack}px;
+
+        > * {
+            width: #{$mcW}px;
+            flex-shrink: 0;
+            margin-right: #{$mcG}px;
+
+            &:first-child {
+                margin-left: #{$wrPullBack}px;
+            }
+
+            &:last-child {
+                margin-right: #{$wrPullBack}px;
+            }
+        }
+    }
+}
+//
+//
+//
+// .dsp-grid:
+// --------------
+// $mq --> media query
+// $column --> number of columns
+// $gutter-y --> vertical gap between items
+// $gutter-x --> horizontal gap between items
+// e.g class name --> .dsp-grid-lg-4-64-24
+@mixin dsp-grid($mq, $column, $gutter-y, $gutter-x) {
+    .dsp-grid-#{$mq}-#{$column}-#{$gutter-y}-#{$gutter-x} {
+        display: grid;
+        grid-template-columns: repeat($column, 1fr);
+        grid-gap: #{$gutter-y}px #{$gutter-x}px;
+    }
+    //
+    // ie11 fix:
+    _:-ms-fullscreen, :root .dsp-grid-#{$mq}-#{$column}-#{$gutter-y}-#{$gutter-x} {
+        overflow: hidden;
+
+        > * {
+            $w: calc-el-width($column, $gutter-x);
+            width: #{$w + "px"};
+            float: left;
+            margin: #{$gutter-y + "px"} #{$gutter-x + "px"} 0 0;
+
+            @for $i from 1 through $column {
+                &:nth-child(#{$i}) {
+                    margin-top: 0;
+                }
+            }
+
+            &:nth-child(#{$column}n+#{$column}) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+//
+//
+//
+// Dynamic transform easy setup
+//
+@mixin dynamicTransform($transform...) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+//
+//
+// Dynamic transition easy setup
+//
+@mixin dynamicTransition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+//
+//
+// Transform x animation
+//
+@mixin transform-X-animation($duration, $amount) {
+    @include dynamicTransition(transform $duration);
+
+    &:hover {
+        @include dynamicTransform(TranslateX($amount));
+    }
+}
+//
+//
+// Replace letters
+//
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+//
+//
+// Encode symbols
+//
+@function url-encode($string) {
+    $map: ( "%": "%25", "<": "%3C", ">": "%3E", " ": "%20", "!": "%21", "*": "%2A", "'": "%27", '"': "%22", "(": "%28", ")": "%29", ";": "%3B", ":": "%3A", "@": "%40", "&": "%26", "=": "%3D", "+": "%2B", "$": "%24", ",": "%2C", "/": "%2F", "?": "%3F", "#": "%23", "[": "%5B", "]": "%5D" );
+
+    $new: $string;
+
+    @each $search, $replace in $map {
+        $new: str-replace($new, $search, $replace);
+    }
+
+    @return $new;
+}
+//
+//
+// Format the SVG as a URL
+//
+@function svg-background-image($string) {
+    @return url('data:image/svg+xml,#{url-encode($string)}');
+}
+//
+//
