@@ -1,18 +1,20 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Intro</title>
-  </head>
-  <body>
-    <!-- 
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>JS Intro</title>
+</head>
+
+<body>
+   <!-- 
         Why Study JavaScript?
 
-    JavaScript is one of the 3 languages all web developers must learn:
-      1. HTML to define the content of web pages
-      2. CSS to specify the layout of web pages
-      3. JavaScript to program the behavior of web pages
+      JavaScript is one of the 3 languages all web developers must learn:
+         1. HTML to define the content of web pages
+         2. CSS to specify the layout of web pages
+         3. JavaScript to program the behavior of web pages
 
 
      1- getElementById()
@@ -26,7 +28,7 @@
 
      6- JavaScript Output
         innerHTML
-        document.write() dökümanın en altına ekler. döküman yüklendikten sonra çağrılırsa bu fonksiyon tüm döküman temizlenir
+        document.write()   döküman yüklendikten sonra çağrılırsa bu fonksiyon tüm dökümanı temizler
         window.alert()
         console.log()
         window.print()
@@ -35,15 +37,15 @@
         Bir yazılım yerine getirilecek talimat listesinden oluşur.
         HTML de js kodlarının talimat listesi görevini browserler yerine getirir.
 
-        var	Declares a variable
-        let	Declares a block variable
-        const	Declares a block constant
-        if	Marks a block of statements to be executed on a condition
-        switch	Marks a block of statements to be executed in different cases
-        for	Marks a block of statements to be executed in a loop
-        function	Declares a function
-        return	Exits a function
-        try	Implements error handling to a block of statements                          
+        "var"	Declares a variable
+        "let"	Declares a block variable
+        "const"	Declares a block constant
+        "if"	Marks a block of statements to be executed on a condition
+        "switch"	Marks a block of statements to be executed in different cases
+        "for"	Marks a block of statements to be executed in a loop
+        "function"	Declares a function
+        "return"	Exits a function
+        "try"	Implements error handling to a block of statements                          
   
      8- JavaScript Comments
         //Single Line Comments
@@ -55,13 +57,144 @@
         
      9- JavaScript Variables
 
-       var  => 1995 to 2015. arası kullanıldı eski browserlarda çalışlıoysa var kullanılabilir
+       var  => 1995 to 2015. arası kullanıldı eski browserlarda çalışılıyorssa var kullanılabilir
        var değişkeni içine istediğimiz parametreyi atayabilir değiştrebiliriz
 
        const => genel bir kural tanımlayacak isek ve bu değişmeyeceğini ön görüyorsak const kullanılır bir const değişkeni 
-       daha sonra tipi(string integer..), değeri  değiştirilemez yeni bir değer ataması yappılamaz
+       daha sonra tipi(string integer..), değeri  değiştirilemez yeni bir değer ataması yappılamaz ve tekrar tanımlanamaz 
+       Block Scope.özelliği vardır tanımlandığı block içindeki değer dışarı aktarmaz
 
-     10- 
+       let =>  eğer değişkenin değerinin değişeeceğini düşünüyorsa let kullanılmalı, tekrar tanımlanamaz.ama değer ataması yapılabilir
+       Block Scope.özelliği vardır tanımlandığı block içindeki değer dışarı aktarmaz
+
+       let x= 10;
+       x=15; yapılabilir
+
+       let carName = "Volvo"; let ve const da tekrar tanımlama yapılamaz hata verir. var ile yapılabilir
+       let carName;
+      
+       carName = "Volvo"; let ve const da kullanılamaz var ile yapılabilir
+       var carName;
+
+       https://www.w3schools.com/js/js_let.asp let için burdaki örneklere bakalım
+       https://www.w3schools.com/js/js_const.asp const için burdaki örneklere bakalım
+
+
+      <p id="demo"></p>
+
+      <script>
+         let carName = "Volvo";
+         document.getElementById("demo").innerHTML = carName;
+      </script>
+      let person = "John Doe", carName = "Volvo", price = 200;
+      
+       let carName; şeklinde tanımlanırsa undefined olur
+       let x = 5 + 2 + 3; aritmetik işlemler yapılabilir
+       let x = "John" + " " + "Doe"; sting ekleme işlemleri yapılabilir
+       let x = "5" + 2 + 3; sonucu ne olur?
+       let x = 2 + 3 + "5"; sonucu ne olur?
+       let _lastName = "Johnson"; değişkenler _ ile başlayabilir
+
+     10-  Operators https://www.w3schools.com/js/js_operators.asp
+            =  Assignment Operator 
+            +	Addition
+            -	Subtraction
+            *	Multiplication
+            **	Exponentiation (ES2016)
+            /	Division
+            %	Modulus (Division Remainder)
+            ++	Increment
+            --	Decrement
+ 
+      11- https://www.w3schools.com/js/js_datatypes.asp önemli
+     
+      12- https://www.w3schools.com/js/js_functions.asp
+
+      13- https://www.w3schools.com/js/js_objects.asp
+
+      14- https://www.w3schools.com/js/js_events.asp
+
+      15- https://www.w3schools.com/js/js_strings.asp
+
+      16- https://www.w3schools.com/js/js_string_methods.asp
+
+      17- https://www.w3schools.com/js/js_string_search.asp
+
+      18- https://www.w3schools.com/js/js_numbers.asp
+
+      19- https://www.w3schools.com/js/js_number_methods.asp
+
+      20- https://www.w3schools.com/js/js_arrays.asp
+
+      21- https://www.w3schools.com/js/js_array_methods.asp
+
+      22- https://www.w3schools.com/js/js_array_sort.asp
+
+      23- https://www.w3schools.com/js/js_array_iteration.asp
+
+      24- https://www.w3schools.com/js/js_dates.asp
+
+      25- https://www.w3schools.com/js/js_date_formats.asp
+
+      26- https://www.w3schools.com/js/js_date_methods.asp
+
+      27- https://www.w3schools.com/js/js_date_methods_set.asp
+
+      28- https://www.w3schools.com/js/js_math.asp
+
+      29- https://www.w3schools.com/js/js_random.asp
+
+      30- https://www.w3schools.com/js/js_comparisons.asp
+
+      31- https://www.w3schools.com/js/js_if_else.asp
+
+      32- https://www.w3schools.com/js/js_switch.asp
+
+      33- https://www.w3schools.com/js/js_loop_for.asp
+
+      34- https://www.w3schools.com/js/js_loop_forin.asp
+
+      35- https://www.w3schools.com/js/js_break.asp
+
+      36- https://www.w3schools.com/js/js_this.asp
+
+      37- https://www.w3schools.com/js/js_arrow_function.asp
+
+      38- https://www.w3schools.com/js/js_classes.asp
+
+      39- https://www.w3schools.com/js/js_modules.asp
+
+      40- https://www.w3schools.com/js/js_json.asp
+
+      41- https://www.w3schools.com/js/js_debugging.asp
+
+      42- https://www.w3schools.com/js/js_performance.asp
+
+      43- https://www.w3schools.com/js/js_callback.asp
+
+      44- https://www.w3schools.com/js/js_asynchronous.asp
+
+      45- https://www.w3schools.com/js/js_promise.asp
+
+      46- https://www.w3schools.com/js/js_async.asp
+
+      47- https://www.w3schools.com/js/js_htmldom.asp dom elemanlarını anlatalım 14 sayfa
+
+      48- https://www.w3schools.com/js/js_window.asp window objesi ve özellikleri anlatalım 7 sayfa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
 
@@ -72,5 +205,6 @@
 
 
      -->
-  </body>
+</body>
+
 </html>
