@@ -1,0 +1,44 @@
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .section-04 {
+    padding: 48px 0;
+  }
+  .section-04 .c-wrapper > .c-item-01 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+  }
+  .section-04 .c-wrapper > .c-item-02 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px 0;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .section-04 {
+    padding: 64px 0;
+  }
+  .section-04 .c-wrapper > .c-item-01 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-04 .c-wrapper > .c-item-02 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+@media all and (min-width: 1320px) {
+  .section-04 {
+    padding: 80px 0;
+  }
+  .section-04 .c-wrapper > .c-item-01 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .section-04 .c-wrapper > .c-item-02 {
+    display: flex;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=Section04.css.map */

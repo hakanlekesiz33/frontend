@@ -1,0 +1,122 @@
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .micro-other-03 {
+    border: 1px solid #D6BCFA;
+    border-radius: 15px;
+    padding: 24px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .micro-other-03 .c-item-01 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .micro-other-03 .c-item-01 .c-item-01-A {
+    flex: 1;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    opacity: 0.8;
+  }
+  .micro-other-03 .c-item-01 .c-item-01-B {
+    margin-left: 32px;
+    transition: transform 0.3s;
+  }
+  .micro-other-03 .c-item-02 {
+    display: none;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #532C59;
+  }
+  .micro-other-03.on .c-item-01 .c-item-01-B {
+    transform: rotate(180deg);
+  }
+  .micro-other-03.on .c-item-02 {
+    display: block;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .micro-other-03 {
+    border: 1px solid #D6BCFA;
+    border-radius: 15px;
+    padding: 24px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .micro-other-03 .c-item-01 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .micro-other-03 .c-item-01 .c-item-01-A {
+    flex: 1;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    opacity: 0.8;
+  }
+  .micro-other-03 .c-item-01 .c-item-01-B {
+    margin-left: 32px;
+    transition: transform 0.3s;
+  }
+  .micro-other-03 .c-item-02 {
+    display: none;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #532C59;
+  }
+  .micro-other-03.on .c-item-01 .c-item-01-B {
+    transform: rotate(180deg);
+  }
+  .micro-other-03.on .c-item-02 {
+    display: block;
+  }
+}
+@media all and (min-width: 1320px) {
+  .micro-other-03 {
+    border: 1px solid #D6BCFA;
+    border-radius: 15px;
+    padding: 24px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .micro-other-03 .c-item-01 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .micro-other-03 .c-item-01 .c-item-01-A {
+    flex: 1;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    opacity: 0.8;
+  }
+  .micro-other-03 .c-item-01 .c-item-01-B {
+    margin-left: 32px;
+    transition: transform 0.3s;
+  }
+  .micro-other-03 .c-item-02 {
+    display: none;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #532C59;
+  }
+  .micro-other-03.on .c-item-01 .c-item-01-B {
+    transform: rotate(180deg);
+  }
+  .micro-other-03.on .c-item-02 {
+    display: block;
+  }
+}/*# sourceMappingURL=03.css.map */

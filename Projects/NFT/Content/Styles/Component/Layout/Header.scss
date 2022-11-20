@@ -1,0 +1,164 @@
+@import "../../Base/Global.scss";
+@import "../../Base/Colour.scss";
+
+/* Common xs1, xs2 mobil*/
+@media all and (max-width: #{($mq-sm1 - 1) + "px"}) {
+    .header-01 {
+        height: 64px;
+        background-color: #FFF;
+
+        .c-wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .c-item-01 {
+                display: none;
+            }
+
+            .c-item-02 {
+                svg {
+                    width: 121px;
+                    height: 32px;
+                }
+            }
+
+            .hamburger-menu-icon {
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 20px;
+            }
+        }
+    }
+}
+
+/* Common sm1, sm2 tablet */
+@media all and (min-width: #{($mq-sm1) + "px"}) and (max-width: #{($mq-md - 1) + "px"}) {
+    .header-01 {
+        height: 76px;
+        background-color: #FFF;
+
+        .c-wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .c-item-01 {
+                display: none;
+            }
+
+            .c-item-02 {
+                 
+            }
+
+            .hamburger-menu-icon {
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 26px;
+            }
+        }
+    }
+
+}
+
+/* Common  md, lg, xl, xxl desktop*/
+@media all and (min-width: #{$mq-md + "px"}) {
+    .header-01 {
+        height: 76px;
+        background: #FFF;
+
+        .c-wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .c-item-01 {
+
+                .level-1 {
+                    display: flex;
+
+                    >li {
+
+                        >a {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 12px;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #000000;
+                            opacity: 0.5;
+                            transition: opacity 0.25s;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+
+                            svg {
+                                margin-left: 6px;
+                            }
+                        }
+
+                        .level-2 {
+                            visibility: hidden;
+                            opacity: 0;
+                            background-color: #FFF;
+                            box-shadow: 5px 10px 8px 10px #888888;
+                            position: absolute;
+                            z-index: 99;
+                            padding: 20px;
+                            width: 130px;
+                            border-radius: 10px;
+
+                            >li {
+
+                                >a {
+                                    padding: 12px;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    color: #000000;
+                                    opacity: 0.5;
+                                    transition: opacity 0.25s;
+
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+
+                                }
+
+                                &:not(:last-child) {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 8px;
+                        }
+
+                        &:hover {
+                            .level-2 {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .c-item-02 {}
+
+            .hamburger-menu-icon {
+                display: none;
+            }
+        }
+    }
+}

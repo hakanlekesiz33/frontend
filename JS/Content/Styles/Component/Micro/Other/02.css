@@ -1,0 +1,78 @@
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .micro-other-02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .micro-other-02 .c-item-01 {
+    margin-bottom: 12px;
+  }
+  .micro-other-02 .c-item-02 {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+  }
+  .micro-other-02 .c-item-03 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #532C59;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .micro-other-02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .micro-other-02 .c-item-01 {
+    margin-bottom: 12px;
+  }
+  .micro-other-02 .c-item-02 {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+  }
+  .micro-other-02 .c-item-03 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #532C59;
+  }
+}
+@media all and (min-width: 1320px) {
+  .micro-other-02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .micro-other-02 .c-item-01 {
+    margin-bottom: 12px;
+  }
+  .micro-other-02 .c-item-02 {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+  }
+  .micro-other-02 .c-item-03 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #532C59;
+    max-width: 269px;
+  }
+}/*# sourceMappingURL=02.css.map */

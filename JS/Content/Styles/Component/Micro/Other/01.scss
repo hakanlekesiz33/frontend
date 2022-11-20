@@ -1,0 +1,80 @@
+@import "../../../Base/Global.scss";
+@import "../../../Base/Colour.scss";
+
+
+/* Common xs1, xs2 */
+@media all and (max-width: #{($mq-sm1 - 1) + "px"}) {
+    .micro-other-01 {
+        margin-bottom: 32px;
+
+        >.c-item-01 {
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            text-align: center;
+            color: #000000;
+        }
+
+        >.c-item-02 {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #532C59;
+        }
+    }
+}
+
+/* Common sm1, sm2 tablet */
+@media all and (min-width: #{($mq-sm1) + "px"}) and (max-width: #{($mq-md - 1) + "px"}) {
+    .micro-other-01 {
+        margin-bottom: 48px;
+
+        >.c-item-01 {
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 56px;
+            text-align: center;
+            color: #000000;
+        }
+
+        >.c-item-02 {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #532C59;
+        }
+    }
+}
+
+@media all and (min-width: #{$mq-md + "px"}) {
+    .micro-other-01 {
+        margin-bottom: 64px;
+
+        >.c-item-01 {
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 64px;
+            text-align: center;
+            color: #000000;
+        }
+
+        >.c-item-02 {
+            width: 820px;
+            margin: 0 auto 0 auto;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #532C59;
+
+            &.w-690 {
+                width: 690px;
+            }
+        }
+    }
+}

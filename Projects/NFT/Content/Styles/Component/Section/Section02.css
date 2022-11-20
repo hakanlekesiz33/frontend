@@ -1,0 +1,44 @@
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .section-02 {
+    padding: 32px 0;
+  }
+  .section-02 .c-wrapper {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .section-02 .c-wrapper > a > svg {
+    width: 100%;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .section-02 {
+    padding: 32px 0;
+  }
+  .section-02 .c-wrapper {
+    padding: 0 158px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .section-02 .c-wrapper > a > svg {
+    width: 135px;
+  }
+}
+@media all and (min-width: 1320px) {
+  .section-02 {
+    padding: 40px 0;
+  }
+  .section-02 .c-wrapper {
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-02 .c-wrapper > a > svg {
+    width: 150px;
+  }
+}/*# sourceMappingURL=Section02.css.map */

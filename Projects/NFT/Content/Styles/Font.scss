@@ -1,0 +1,29 @@
+﻿ 
+ @font-face {
+    font-family: 'Syne';
+    src: url('./Fonts/Syne-Regular.ttf');
+    font-weight: 300;
+}
+
+ 
+@font-face {
+    font-family: 'Syne';
+    src: url('./Fonts/Syne-Medium.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Syne';
+    src: url('./Fonts/Syne-Bold.ttf');
+    font-weight: 700;
+}
+ 
+
+body {
+    font-family: 'Syne';
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}

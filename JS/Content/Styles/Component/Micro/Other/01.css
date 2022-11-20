@@ -1,0 +1,67 @@
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .micro-other-01 {
+    margin-bottom: 32px;
+  }
+  .micro-other-01 > .c-item-01 {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
+  }
+  .micro-other-01 > .c-item-02 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #532C59;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .micro-other-01 {
+    margin-bottom: 48px;
+  }
+  .micro-other-01 > .c-item-01 {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    color: #000000;
+  }
+  .micro-other-01 > .c-item-02 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #532C59;
+  }
+}
+@media all and (min-width: 1320px) {
+  .micro-other-01 {
+    margin-bottom: 64px;
+  }
+  .micro-other-01 > .c-item-01 {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: #000000;
+  }
+  .micro-other-01 > .c-item-02 {
+    width: 820px;
+    margin: 0 auto 0 auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #532C59;
+  }
+  .micro-other-01 > .c-item-02.w-690 {
+    width: 690px;
+  }
+}/*# sourceMappingURL=01.css.map */

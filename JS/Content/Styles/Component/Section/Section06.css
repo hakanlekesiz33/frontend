@@ -1,0 +1,92 @@
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .section-06 {
+    padding: 32px 0;
+  }
+  .section-06 .c-wrapper > .c-item-01 {
+    width: 100%;
+    margin-right: 32px;
+    margin-bottom: 32px;
+  }
+  .section-06 .c-wrapper > .c-item-01 > .c-item-01-A {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    color: #000000;
+    text-align: center;
+  }
+  .section-06 .c-wrapper > .c-item-01 > .c-item-01-B {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #532C59;
+  }
+  .section-06 .c-wrapper > .c-item-02 .micro-other-03:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .section-06 {
+    padding: 48px 0;
+  }
+  .section-06 .c-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-06 .c-wrapper > .c-item-01 {
+    width: calc(50% - 12px);
+  }
+  .section-06 .c-wrapper > .c-item-01 > .c-item-01-A {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    color: #000000;
+  }
+  .section-06 .c-wrapper > .c-item-01 > .c-item-01-B {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #532C59;
+  }
+  .section-06 .c-wrapper > .c-item-02 {
+    width: calc(50% - 12px);
+  }
+  .section-06 .c-wrapper > .c-item-02 .micro-other-03:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+@media all and (min-width: 1320px) {
+  .section-06 {
+    padding: 80px 0;
+  }
+  .section-06 .c-wrapper {
+    display: flex;
+  }
+  .section-06 .c-wrapper > .c-item-01 {
+    width: 412px;
+    margin-right: 32px;
+  }
+  .section-06 .c-wrapper > .c-item-01 > .c-item-01-A {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    color: #000000;
+  }
+  .section-06 .c-wrapper > .c-item-01 > .c-item-01-B {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #532C59;
+  }
+  .section-06 .c-wrapper > .c-item-02 {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 32px;
+  }
+}/*# sourceMappingURL=Section06.css.map */

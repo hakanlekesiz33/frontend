@@ -1,0 +1,148 @@
+/* Common xs1, xs2 mobil*/
+@media all and (max-width: 767px) {
+  .footer-01 {
+    padding: 32px 0;
+  }
+  .footer-01 .c-wrapper .c-item-01 {
+    display: flex;
+    padding-top: 100px;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 {
+    width: 50%;
+    border-top: 1px solid #CCD5DF;
+    padding-top: 32px;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li > a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li > a:hover {
+    opacity: 1;
+  }
+  .footer-01 .c-wrapper .c-item-01 .logo {
+    position: absolute;
+    left: calc(50% - 76px);
+    top: 0;
+  }
+  .footer-01 .c-wrapper .c-item-02 {
+    margin: 40px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #CCD5DF;
+  }
+  .footer-01 .c-wrapper .c-item-03 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.5;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .footer-01 {
+    padding: 80px 0;
+  }
+  .footer-01 .c-wrapper .c-item-01 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul {
+    display: flex;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li:not(:last-child) {
+    margin-right: 24px;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li > a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li > a:hover {
+    opacity: 1;
+  }
+  .footer-01 .c-wrapper .c-item-01 .logo {
+    position: absolute;
+    left: 0;
+  }
+  .footer-01 .c-wrapper .c-item-01 .c-item-01-A > ul > li:last-child {
+    margin-right: 24px;
+  }
+  .footer-01 .c-wrapper .c-item-02 {
+    margin: 40px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #CCD5DF;
+  }
+  .footer-01 .c-wrapper .c-item-03 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.5;
+  }
+}
+/* Common  md, lg, xl, xxl desktop*/
+@media all and (min-width: 1320px) {
+  .footer-01 {
+    padding: 80px 0;
+  }
+  .footer-01 .c-wrapper .c-item-01 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul {
+    display: flex;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li:not(:last-child) {
+    margin-right: 24px;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li > a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+  }
+  .footer-01 .c-wrapper .c-item-01 .nav-01 > ul > li > a:hover {
+    opacity: 1;
+  }
+  .footer-01 .c-wrapper .c-item-01 .logo {
+    position: absolute;
+    left: calc(50% - 76px);
+  }
+  .footer-01 .c-wrapper .c-item-02 {
+    margin: 40px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #CCD5DF;
+  }
+  .footer-01 .c-wrapper .c-item-03 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.5;
+  }
+}/*# sourceMappingURL=Footer.css.map */

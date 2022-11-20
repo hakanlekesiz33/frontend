@@ -1,0 +1,64 @@
+//
+//
+// media query values
+//
+$mq-xs1: 0;
+$mq-xs2: 420;
+$mq-sm1: 768;
+$mq-sm2: 1024;
+$mq-md: 1320;
+$mq-lg: 1680;
+$mq-xl: 1920;
+
+
+$c-wrapper-md:1300px; 
+$c-wrapper-sm:760px; 
+$c-wrapper-xs:calc(100% - 32px);
+//
+//
+// Transform x animation
+//
+@mixin transform-X-animation($duration, $amount) {
+    @include dynamicTransition(transform $duration);
+
+    &:hover {
+        @include dynamicTransform(TranslateX($amount));
+    }
+}
+//
+//
+// Replace letters
+//
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+//
+//
+// Encode symbols
+//
+@function url-encode($string) {
+    $map: ( "%": "%25", "<": "%3C", ">": "%3E", " ": "%20", "!": "%21", "*": "%2A", "'": "%27", '"': "%22", "(": "%28", ")": "%29", ";": "%3B", ":": "%3A", "@": "%40", "&": "%26", "=": "%3D", "+": "%2B", "$": "%24", ",": "%2C", "/": "%2F", "?": "%3F", "#": "%23", "[": "%5B", "]": "%5D" );
+
+    $new: $string;
+
+    @each $search, $replace in $map {
+        $new: str-replace($new, $search, $replace);
+    }
+
+    @return $new;
+}
+//
+//
+// Format the SVG as a URL
+//
+@function svg-background-image($string) {
+    @return url('data:image/svg+xml,#{url-encode($string)}');
+}
+//
+//
