@@ -139,7 +139,7 @@ x = undefined;
 console.log(typeof x);
 
 //x e bir değer atanır
-debugger
+
 if (x = 5) {
     console.log(x);
 }
@@ -154,6 +154,6 @@ if (x == 5) {
 // x number ve 5 e eşitse girer
 //x="5" ise girmez
 if (x === 5) {
+    debugger
     console.log(x);
-
 }
