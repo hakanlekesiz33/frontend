@@ -4,7 +4,8 @@
 //console.log("js kodu başladı")
 
 
-//document.getElementById("main").innerHTML="";
+//document.getElementById("main").innerHTML="sdfs";
+//document.getElementById("main").innerHTML="<h2>başlık</h2>";
 //document.getElementById("main").style.backgroundColor = "#000";
 //document.getElementById("main").style.display = "none";
 //document.getElementById("main").style.display = "block";
@@ -13,14 +14,23 @@
 //console.log("js kodu bitti")
 //window.print()
 
-/*
 
-  function test(params) {
-      return params + 10;
-  }
- test(5)
 
-*/
+function test(params) {
+    debugger
+    if (typeof params === "number") {
+        return params + 10;
+    }
+    return typeof params;
+
+}
+
+// var result = test(5);
+// console.log(result)
+
+
+
+
 // var age = 18;
 
 // if (age < 10) {
@@ -101,7 +111,7 @@
 
 // var z = 5;
 // console.log(z);
-// z = z +1 ;
+// z = z + 1 ;
 // console.log(z);
 // z++;
 // console.log(z);
@@ -119,31 +129,31 @@
 // console.log(z%5);
 
 
-let x;           // Now x is undefined
-console.log(typeof x);
-x = 5;           // Now x is a Number
-console.log(typeof x);
-x = 'John';      // Now x is a String
-console.log(typeof x);
-x = 34.50;     // Written with decimals
-console.log(typeof x);
-x = true; //boolean 
-console.log(typeof x);
-x = ["Saab", "Volvo", "BMW"]; //array
-console.log(typeof x);
-x = { name: "Hakan", lastname: "Lekesiz" }; //object 
-console.log(typeof x);
+let x;
+console.log(typeof x); // Now x is undefined
+x = 5;
+console.log(typeof x);// Now x is a Number
+x = 'John';
+console.log(typeof x);// Now x is a String
+x = 34.50;
+console.log(typeof x);// Written with decimals
+x = true;
+console.log(typeof x); //boolean 
+x = ["Saab", "Volvo", "BMW"];
+console.log(typeof x);//object
+x = { name: "Hakan", lastname: "Lekesiz" };
+console.log(typeof x);//object 
 x = null;
-console.log(typeof x);
+console.log(typeof x);//object 
 x = undefined;
-console.log(typeof x);
+console.log(typeof x);// Now x is undefined
 
 //x e bir değer atanır
 
 if (x = 5) {
     console.log(x);
 }
- 
+
 x = "5";
 //x'in 5 olup olmadığına bakar ama tip kontrolü yapmaz
 //x="5" ise girer
@@ -153,7 +163,117 @@ if (x == 5) {
 
 // x number ve 5 e eşitse girer
 //x="5" ise girmez
-if (x === 5) {
-    debugger
-    console.log(x);
+// if (x === 5) {
+//     debugger
+//     console.log(x);
+// }
+
+// _x = 10;
+// var _x;
+
+// let _y1;
+// _y1 = 10;
+
+// {
+//     _x = 12;
+// }
+
+// console.log(_x); // 12
+
+let _y = 11;
+console.log(_y);//11
+
+{
+    _y = 12;
+    console.log(_y);//12
 }
+
+console.log(_y);//12
+
+
+// const _z = 11;
+
+
+
+//object
+
+var carName = "Fiat";
+console.log(carName);
+var carPrice = "500.000TL";
+console.log(carPrice);
+
+var car = {
+    name: "Fiat",
+    price: "500.000TL",
+    sdfsf: 50,
+    getCarProperties: function () {
+        console.log("Arabanın Adı: " + car.name + " Arabanın Fiyatı: " + car.price);
+    }
+};
+
+console.log(car.name);
+console.log(car.price);
+car.getCarProperties();
+
+//events
+
+// Event	Description
+// onchange	An HTML element has been changed
+// onclick	The user clicks an HTML element
+// onmouseover	The user moves the mouse over an HTML element
+// onmouseout	The user moves the mouse away from an HTML element
+// onkeydown	The user pushes a keyboard key
+// onload	The browser has finished loading the page
+
+
+
+//string methods
+
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log("string methods");
+console.log("karakter sayısı:" + text.length); //string bir değişkenin karakter sayısnıı dönüyor
+console.log(text.substring(7, 13)); //7. karakterden başlayıp 13. karaktere kadar kesiyor
+console.log(text.substring(5)); //5. karakterden başlayıp bitene kadar kesiyor
+console.log(text.replace("ABC", "z")); //"ABC" stinrgini "z" ile değiştirir
+
+text = "AFsfsfSfddfAAAAdfdffd"
+console.log(text.replaceAll("A", "")); //bütün A karaterlerini siler
+console.log(text.toUpperCase().replaceAll("S", "")); // önce bütün karakterler büyük harfe dönüştürülür sonra S karakteri silinir
+console.log(text.toUpperCase()); // bütün karakterleri büyük harfe çevirir
+text = "i"
+console.log(text.replaceAll("i", "ğ").toLocaleUpperCase()); // bütün karakterleri büyük harfe çevirir
+
+let text1 = "Hello";
+let text2 = "World";
+console.log(text1.concat(" ", text2));
+
+text1 = "      Hello World!      ";
+console.log(text1.trim());//bir string ifadenin başındaki ve sonundaki tüm boşluluları siler
+console.log(text1.trimStart());
+console.log(text1.trimEnd());
+console.log(text.replaceAll(" ", ""));//tüm boşlukları siliyoruz
+
+console.log(text.charAt(0)); //string ifadenin istenilen karakterine ulaşabilyoruz
+
+var _text = "bilge adam";
+var firstChar = _text.charAt(0);
+console.log(firstChar.toLocaleUpperCase().concat("", _text.substring(1)));
+
+_text = "bilge adam";
+console.log(_text.split(" ")); // ["bilge","adam"]
+
+let str = "Jacobs Monarch Filtre Kahve 2 X 500 Gr + Tadıbu Kakaolu Fındık Ezmesi 330 Gr";
+console.log(str.toLowerCase().indexOf("kahve"));//locate kelimesinin başlangıç değerini dönüyor
+
+if (str.toLowerCase().includes("kahve")) {
+    //ürün bulundu
+}
+else {
+    //ürün yok
+}
+
+
+function converToTurkishChar(text) {
+    return text.replaceAll("ğ","g").replaceAll("Ğ","G").replaceAll("İ","I").replaceAll("ı","i").replaceAll("ş","s")
+}
+

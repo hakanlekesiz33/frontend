@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="x1" 
+        onmouseover="Calculater.onMouseOver(this)" 
+        onmouseleave="Calculater.onMouseLeave(this)" 
+        onkeyup="Calculater.setValues(this)">
+
+        <input type="text" id="y1" onkeyup="Calculater.setValues(this)">
+
+        <a href="#" onclick="Calculater.multiply();"> Çarpım </a>
+        <a href="#" onclick="Calculater.add();"> topla </a>
+        <a href="#" onclick="Calculater.sub();"> çıkar </a>
+        <a href="#" onclick="Calculater.divide();"> Böl </a>
+        <div> <span id="result"></span></div>
+    </div>
+
+    <script>
+
+        var Calculater = {
+            values: {
+                x1: "",
+                y1: ""
+            },
+            elements: {
+                x1: document.getElementById("x1"),
+                y1: document.getElementById("y1"),
+                result: document.getElementById("result"),
+            },
+            multiply: function () {
+                this.elements.result.innerText = Calculater.values.x1 * Calculater.values.y1;
+            },
+            add: function () {
+                this.elements.result.innerText = "Sonucunuz= " + (Calculater.values.x1 + Calculater.values.y1);
+            },
+            sub: function () {
+                Calculater.elements.result.innerText = Calculater.values.x1 - Calculater.values.y1;
+            },
+            divide: function () {
+                Calculater.elements.result.innerText = Calculater.values.x1 / Calculater.values.y1;
+            },
+            setValues: function (sender) {
+                Calculater.values[sender.id] = parseInt(sender.value);
+                console.log(Calculater.values)
+            },
+            onMouseOver: function (sender) {
+                sender.style.backgroundColor = "red";
+            },
+            onMouseLeave: function (sender) {
+                sender.style.backgroundColor = "white";
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>
