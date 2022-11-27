@@ -1,0 +1,164 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 100px;
+        }
+
+        p:first-child {
+            color: green;
+        }
+
+        p:last-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>Kişi listesi oluşturalım kişileri listeleyelim</p>
+        <p id="personList"></p>
+    </div>
+    <div>
+        <p>kişi listesine kişi ekleyelim kişileri listeleyelim</p>
+        <p id="personListAdd"></p>
+    </div>
+    <div>
+        <p>son eklenen kişiyi silelim kişileri listeleyelim</p>
+        <p id="personListRemove"></p>
+    </div>
+    <div>
+        <p>En yaşlı kişinin adını yazdıralım</p>
+        <p id="oldPersonName"></p>
+    </div>
+    <div>
+        <p>en genç kişi adını yazdıralım</p>
+        <p id="youngPersonName"></p>
+    </div>
+    <div>
+        <p>yaşı 18den büyükler listesini yazdıralım</p>
+        <p id="over18List"></p>
+    </div>
+    <div>
+        <p>adında a harfi olanlar listesini yazdıralım</p>
+        <p id="inculedAParamList"></p>
+    </div>
+    <div>
+        <p>geliri 25000 üzeri olanlar listesini yazdıralım</p>
+        <p id="over25000Income"></p>
+    </div>
+    <div>
+        <p>çocuğu olan kişi varmı?</p>
+        <p id="hasChildPerson"></p>
+    </div>
+    <div>
+        <p>çocuğu olmayan kişi varmı?</p>
+        <p id="hasNoChildPerson"></p>
+    </div>
+    <div>
+        <p>kişileri ad sırasına göre listeleyelim</p>
+        <p id="sortByNameList"></p>
+    </div>
+    <div>
+        <p>kişileri en yüksek gelirden düşük gelire doğru listeleyelim</p>
+        <p id="sortByIncomeList"></p>
+    </div>
+
+    <script>
+        const persons = [
+            { name: "bbbb", lastName: "aaaa", income: 15000, age: 15, children: [{ name: "aa", lastName: "bbb" }] },
+            { name: "sdfs", lastName: "sdfsd", income: 5000, age: 20, children: [{ name: "addsd", lastName: "bbbjkl" },{ name: "ajkla", lastName: "bbbjkl" }] },
+            { name: "en genç kişi", lastName: "tyutyu", income: 0, age: 12, children: [] },
+            { name: "en yaşlı kişinin adı", lastName: "dgfdg", income: 35000, age: 50, children: [{ name: "akka", lastName: "bkkbb" }] },
+            { name: "askdas", lastName: "jkljk", income: 0, age: 25, children: [] },
+        ];
+
+        //1.soru
+        document.getElementById("personList").innerText = persons.map(x => x.name).join(", ");
+
+        //2.soru
+        persons.push(
+            { name: "zzzz", lastName: "fdfd", income: 15000, age: 20, children: [{ name: "aa", lastName: "bbb" }] }
+        );
+        document.getElementById("personListAdd").innerText = persons.map(x => x.name).join(", ");
+
+        //3. soru
+        persons.pop();
+        document.getElementById("personListRemove").innerText = persons.map(x => x.name).join(", ");
+
+        //4. soru
+
+        //1. adımda küçükten büyüğe yaşları sort yapacaz
+        persons.sort(function (a, b) { return a.age - b.age });
+
+        //2. adımda en son itemı elde edecez ve nameini alacaz
+        var lastItem = persons[persons.length - 1];//son itemı seçtim
+        document.getElementById("oldPersonName").innerText = lastItem.name;
+
+
+        //5. Soru
+        var firstItem = persons[0];//ilk itemı seçtim
+        document.getElementById("youngPersonName").innerText = firstItem.name;
+
+        //6. soru
+        var over18List = persons.filter(x => x.age > 18);
+        document.getElementById("over18List").innerText = over18List.map(x => x.name).join(", ");
+
+
+        //7.soru
+        var includesAList = persons.filter(x => x.name.toLocaleLowerCase().includes("a"));
+        document.getElementById("inculedAParamList").innerText = includesAList.map(x => x.name).join(", ");
+
+        //8. soru
+        var over12500List = persons.filter(x => x.income > 25000);
+        document.getElementById("over25000Income").innerText = over12500List.map(x => x.name).join(", ");
+
+        //9.soru
+        var hasChild = persons.some(x => x.children.length > 0);
+        document.getElementById("hasChildPerson").innerText = hasChild ? "Evet var" : "Hayır yok";
+
+        //10.soru
+        var hasNoChild = persons.some(x => x.children.length === 0);
+        document.getElementById("hasNoChildPerson").innerText = hasNoChild ? "Var" : "Yok";
+
+
+        //11. soru
+        var sortedByNameList = persons.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
+        document.getElementById("sortByNameList").innerText = sortedByNameList.map(x => x.name).join(", ");
+
+        //12. soru
+        var sortedByIncome = persons.sort((a, b) => b.income - a.income);
+        document.getElementById("sortByIncomeList").innerHTML = sortedByIncome.map(x => "adı: " + x.name + " geliri: " + x.income).join("<br/>");
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
