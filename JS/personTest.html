@@ -71,10 +71,15 @@
         <p id="sortByIncomeList"></p>
     </div>
 
+    <div>
+        <p>13- en yüksek geliri olan kişiyi silelim sonra kişileri listeyelim</p>
+        <p id="removeHighIncome"></p>
+    </div>
+
     <script>
         const persons = [
             { name: "bbbb", lastName: "aaaa", income: 15000, age: 15, children: [{ name: "aa", lastName: "bbb" }] },
-            { name: "sdfs", lastName: "sdfsd", income: 5000, age: 20, children: [{ name: "addsd", lastName: "bbbjkl" },{ name: "ajkla", lastName: "bbbjkl" }] },
+            { name: "sdfs", lastName: "sdfsd", income: 5000, age: 20, children: [{ name: "addsd", lastName: "bbbjkl" }, { name: "ajkla", lastName: "bbbjkl" }] },
             { name: "en genç kişi", lastName: "tyutyu", income: 0, age: 12, children: [] },
             { name: "en yaşlı kişinin adı", lastName: "dgfdg", income: 35000, age: 50, children: [{ name: "akka", lastName: "bkkbb" }] },
             { name: "askdas", lastName: "jkljk", income: 0, age: 25, children: [] },
@@ -137,28 +142,88 @@
         var sortedByIncome = persons.sort((a, b) => b.income - a.income);
         document.getElementById("sortByIncomeList").innerHTML = sortedByIncome.map(x => "adı: " + x.name + " geliri: " + x.income).join("<br/>");
 
+        //13. Soru 
+        var highIncome = 0;
+        for (let i = 0; i < persons.length; i++) {
+            let p = persons[i];
+            if (p.income > highIncome) {
+                highIncome = p.income;
+            }
+        }
+        var index = persons.findIndex(x => x.income === highIncome)
+        persons.splice(index, 1);
+        document.getElementById("removeHighIncome").innerText = persons.map(x => x.name).join(", ");
+
+        //14. Soru
+        for (let i = 0; i < persons.length; i++) {
+            persons[i].age = persons[i].age + 1;
+        }
 
 
+        //15. Soru
 
+        for (let i = 0; i < persons.length; i++) {
+            let p = persons[i];
+            p.income = p.income * 1.2;
+        }
 
+        //16.Soru
+        persons.unshift(
+            {
+                name: "5cocuklukisi",
+                lastName: "aaaa",
+                income: 55000,
+                age: 55,
+                children: [{ name: "11", lastName: "bbb" }, { name: "22", lastName: "bbb" }, { name: "33", lastName: "bbb" }, { name: "44", lastName: "bbb" }, { name: "55", lastName: "bbb" }]
+            },
+        )
 
+        //17.soru
+        for (let i = 0; i < persons.length; i++) {
+            let p = persons[i];
+            if (p.children.length === 1) {
+                p.income = p.income * 1.1;
+            }
+            else if (p.children.length < 1 && p.children.length < 4) {
+                p.income = p.income * 1.2;
+            }
+            else if (p.children.length > 3) {
+                p.income = p.income * 1.3;
+            }
+        }
 
+        //18. Soru
 
+        var index = persons.findIndex(x => x.name === "en genç kişi");
+        var youngPersonChildren = persons[index].children;
+        youngPersonChildren.push({ name: "dsfsdf", lastName: "asdasd" });
+
+        //19. soru
+        for (let i = 0; i < persons.length; i++) {
+            let p = persons[i];
+            if (p.income === 0 && p.age > 20) {
+                p.income = 10000;
+            }
+        }
+
+        //20 soru
+        var totalIncome = 0;
+
+        for (let i = 0; i < persons.length; i++) {
+            let p = persons[i];
+            totalIncome = totalIncome + p.income;
+        }
+        console.log(totalIncome);
+
+        //21. Soru
+        var avarage = totalIncome / persons.length;
+        console.log(avarage);
 
 
 
     </script>
 
-
-
-
-
-
-
-
-
-
-
+ 
 </body>
 
 </html>

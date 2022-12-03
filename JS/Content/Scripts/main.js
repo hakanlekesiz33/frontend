@@ -364,7 +364,7 @@ const _cars = [
     { type: "Fiat", year: 208, id: "0004" },
 ];
 
- 
+
 _cars.sort(function (a, b) { return a.year - b.year }); //objenin içindeki numberları sort eder
 
 const numbers = [45, 4, 9, 16, 25];
@@ -392,6 +392,88 @@ fruits.includes("Mango"); //array içinde mango itemı varmı yokmu diy bakar tr
 //*****
 var selectedCar = _cars.find(x => x.id === "0002"); // array içindeki elemanları filtreler buldğu ilk itemı döner
 console.log(selectedCar);
+
+
+
+// date formats
+
+
+//create Date
+var d = new Date(); // 03/12/2022 11:37:00
+var yy = new Date("2022-03-25");
+//yıl-ay-gün...
+var xx = new Date(2018, 11, 24, 10, 33, 30, 0);
+
+
+//get date func
+var d = new Date(); // 03/12/2022 11:37:00
+d.getFullYear(); // 2022 (number)
+d.getMonth();  // 11 (number)
+d.getDate();   // 3 (number) günü dönüyor
+d.getDay();	   // 6 (number) haftanın kaçıncı günü olduğunu dönüyor pazar=0 pazartesi=1 ... cumartesi=6
+d.getHours()	//Get hour (0-23)
+d.getMinutes()	//Get minute (0-59)
+d.getSeconds()	//Get second (0-59)
+d.getMilliseconds()	//Get millisecond (0-999)
+
+
+d.getTime()	//Get time (milliseconds since January 1, 1970)
+
+const months = ["Ocak", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Aralık"];
+const days = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "PErşembe", "Cuma", "Cumartesi"];
+
+console.log(days[d.getDay()]);
+console.log(months[d.getMonth()]);
+
+
+d.setDate() //	Set the day as a number (1-31)
+d.setFullYear()	//Set the year (optionally month and day)
+d.setHours()	//Set the hour (0-23)
+d.setMilliseconds()	//Set the milliseconds (0-999)
+d.setMinutes()	//Set the minutes (0-59)
+d.setMonth()	//Set the month (0-11)
+d.setSeconds()	//Set the seconds (0-59) 
+
+d.setDate(d.getDate() + 1); // bir gün eklemiş oluruz
+d.setDate(d.getDate() - 1); // bir gün çıkarmış oluruz oluruz
+d.setDate(d.getDate() + 7); // bir hafta eklemiş oluruz oluruz
+
+d.setFullYear(d.getFullYear() - 1); // bir yıl çıkardık
+
+
+function checkCompanyIsFinish(startDate) {
+    return startDate.setDate(startDate.getDate() + 7) < new Date();
+}
+
+var isFinish = checkCompanyIsFinish(new Date("2022-12-01"));
+console.log(isFinish);
+
+
+
+var startDate = new Date(2022, 11, 1, 22, 30, 0);
+var endDate = new Date(2022, 11, 8, 22, 30, 0);
+var nowDate = new Date();
+
+var startDateString = startDate.getDate() + " " + months[startDate.getMonth()] + " " + startDate.getFullYear() + " " + startDate.getHours() + ":" + startDate.getMinutes();
+var endDateString = endDate.getDate() + " " + months[endDate.getMonth()] + " " + endDate.getFullYear() + " " + endDate.getHours() + ":" + endDate.getMinutes();
+
+var isFinish = checkCompanyIsFinish(startDate);
+
+if (isFinish) {
+    alert("Kampanya bitmiştir");
+}
+else {
+debugger
+    var seconds = Math.floor((endDate - nowDate) / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var dayss = Math.floor(hours / 24);
+    var kalanSaat = hours % 24;
+    var kalanDakika = minutes % 60;
+    var kalanSaniye = seconds % 60;
+
+    alert("Kalan Süre: " + dayss + " Gün, " + kalanSaat + " Saat, " + kalanDakika + " Dakika, " + kalanSaniye + " Saniye.")
+}
 
 
 
