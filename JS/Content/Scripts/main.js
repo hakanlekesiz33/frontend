@@ -17,7 +17,6 @@
 
 
 function test(params) {
-    debugger
     if (typeof params === "number") {
         return params + 10;
     }
@@ -164,7 +163,6 @@ if (x == 5) {
 // x number ve 5 e eşitse girer
 //x="5" ise girmez
 // if (x === 5) {
-//     debugger
 //     console.log(x);
 // }
 
@@ -445,37 +443,240 @@ function checkCompanyIsFinish(startDate) {
     return startDate.setDate(startDate.getDate() + 7) < new Date();
 }
 
+
+
+
 var isFinish = checkCompanyIsFinish(new Date("2022-12-01"));
 console.log(isFinish);
 
 
-
 var startDate = new Date(2022, 11, 1, 22, 30, 0);
 var endDate = new Date(2022, 11, 8, 22, 30, 0);
-var nowDate = new Date();
 
-var startDateString = startDate.getDate() + " " + months[startDate.getMonth()] + " " + startDate.getFullYear() + " " + startDate.getHours() + ":" + startDate.getMinutes();
-var endDateString = endDate.getDate() + " " + months[endDate.getMonth()] + " " + endDate.getFullYear() + " " + endDate.getHours() + ":" + endDate.getMinutes();
+function updateCompanyPromotionTime() {
+    var nowDate = new Date();
+    var startDateString = startDate.getDate() + " " + months[startDate.getMonth()] + " " + startDate.getFullYear() + " " + startDate.getHours() + ":" + startDate.getMinutes();
+    var endDateString = endDate.getDate() + " " + months[endDate.getMonth()] + " " + endDate.getFullYear() + " " + endDate.getHours() + ":" + endDate.getMinutes();
 
-var isFinish = checkCompanyIsFinish(startDate);
+    var isFinish = checkCompanyIsFinish(startDate);
 
-if (isFinish) {
-    alert("Kampanya bitmiştir");
+    if (isFinish) {
+        //alert("Kampanya bitmiştir");
+    }
+    else {
+        var seconds = Math.floor((endDate - nowDate) / 1000);
+        var minutes = Math.floor(seconds / 60);
+        var hours = Math.floor(minutes / 60);
+        var dayss = Math.floor(hours / 24);
+        var kalanSaat = hours % 24;
+        var kalanDakika = minutes % 60;
+        var kalanSaniye = seconds % 60;
+        document.querySelector("main").innerHTML = "Kalan Süre: " + dayss + " Gün, " + kalanSaat + " Saat, " + kalanDakika + " Dakika, " + kalanSaniye + " Saniye.";
+    }
+}
+
+setInterval(() => {
+    updateCompanyPromotionTime();
+}, 1000);
+
+
+//Math
+
+Math.random(); // 0 ile 1 arasında rasgele ondalıklı sayı üretir
+Math.floor(15.5); // ondalıklı kısmı atar integera çevirir
+
+Math.floor(Math.random() * 10); // 0 ile 9 arasında intafer değer üretir
+
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test("hakan.lekesiz@bilgeadam.com")) {
+    console.log("email formatı doğru");
 }
 else {
-debugger
-    var seconds = Math.floor((endDate - nowDate) / 1000);
-    var minutes = Math.floor(seconds / 60);
-    var hours = Math.floor(minutes / 60);
-    var dayss = Math.floor(hours / 24);
-    var kalanSaat = hours % 24;
-    var kalanDakika = minutes % 60;
-    var kalanSaniye = seconds % 60;
+    console.log("email formatı yanlış");
+}
 
-    alert("Kalan Süre: " + dayss + " Gün, " + kalanSaat + " Saat, " + kalanDakika + " Dakika, " + kalanSaniye + " Saniye.")
+//Arrow Functions eX6 ile hayatımza girmiştir 2015 öncesi browserlarda çalışmaz
+
+var degiskenAdi = (alacagiParametre) => {
+    //kod bloğu
+    Math.floor(15.5);
+    // alert("Kampanya bitmiştir");
+
+}
+
+//eğer kod bloğun bir kaç satırdan oluşmuyor ise scope açmana gerek yok
+var degiskenAdi2 = (x) => 5 * x;
+
+
+//eğer tek parametre alıyor ise (x) parantezleri kullanmana gerek yok
+var degiskenAdi2 = x => 5 * x;
+
+//Json
+var jsonExample = { "firstName": "John", "lastName": "Doe" }; //json objesi
+
+var stringJson = '{ "employees" : [' +
+    '{ "firstName":"John" , "lastName":"Doe" },' +
+    '{ "firstName":"Anna" , "lastName":"Smith" },' +
+    '{ "firstName":"Peter" , "lastName":"Jones" } ]}'; // string bir json objesi
+
+console.log(JSON.parse(stringJson)); // string bir json'ı js objesine dönüştürecek
+
+var person = { firstName: "John", lastName: "Doe" };
+
+var convertedToString = JSON.stringify(person); //js objesini json stringe çevirdi
+
+
+//promise yapısı
+
+const myPromise = new Promise((myResolve, myReject) => { //2. adım promise yapısında myResolve fonskiyonu çağrıldığı zaman promise görevini yerine getirir
+    setTimeout(() => {
+        myResolve("I love You !!");
+        // myReject();
+    }, 3000);
+
+});
+
+myPromise.then((value) => { //1. adım promise çağrılır
+    // alert(value); //3. adımda ise promise görevini yerine getirdiğinde burdaki kod bloğu çalışır
+});
+
+
+
+//settimeout
+document.querySelector("main").innerHTML = "xxxxxxxxx";
+
+setTimeout(() => {
+    //document.querySelector("main").innerHTML = "yyyyyy";
+}, 5000);
+
+document.querySelector("main").innerHTML = "zzzzzzz";
+
+
+var _x = 0;
+setInterval(() => {
+    //document.querySelector("main").innerHTML = _x++;
+}, 1000);
+
+
+//widow close ve window open
+//var myWindow = window.open("", "myWindow", "width=200, height=100");
+//myWindow.close();
+//myWindow.focus();
+
+
+//confirm methodu
+// if (confirm("Onaylıyor musun?") == true) {
+//     console.log("You pressed OK!");
+// } else {
+//     console.log("You pressed Cancel!");
+// }
+
+
+//window.history.length // geçmişte ziyaret edilen sayfların sayısnı veriyor
+
+let height = window.innerHeight; //ekran yüksekliğini veriyor
+let width = window.innerWidth; //ekran genişliğini verir
+
+//sessionStorage.setItem("theme", "light"); //browser kapandığı an temizlenir
+//localStorage.setItem("theme", "light"); //browser yada bilgisayr kapansada bu bilgi silinmez kulalnıcı browser cachini temizlemedikçe bu bilgi saklı kalır
+
+
+
+function toggleTheme(event) {
+     
+    event.preventDefault();// a tagi elementinin default davranışı olan diğer sayfaya geçişi engelledik
+    //event.target  //a elementinin kendisini döner
+    var mode = localStorage.getItem("theme"); //localstroge daki theme keyli değeri getiririz
+
+    if (mode === "dark") {
+        localStorage.setItem("theme", "light");//localstroge'a theme key li bir value atamsı yaparız
+        document.querySelector("html").classList.remove("dark-mode");
+        document.querySelector("html").classList.add("light-mode");
+    }
+    else {
+        localStorage.setItem("theme", "dark");
+        document.querySelector("html").classList.remove("light-mode");
+        document.querySelector("html").classList.add("dark-mode");
+
+    }
+
+}
+
+function checkTheme() {
+
+    var mode = localStorage.getItem("theme");
+    if (mode === "dark") {
+        document.querySelector("html").classList.remove("light-mode");
+        document.querySelector("html").classList.add("dark-mode");
+    }
+}
+
+checkTheme();
+//localStorage.removeItem("theme"); //localstroge daki theme key değişken silinir
+
+
+//window location objesi
+//href, protoklü dönüyor(https: yada http:)
+//host www.w3schools.com
+//pathname /jsref/prop_win_location.asp
+
+//window.location.href= "https://www.w3schools.com/jsref/prop_win_location.asp" //sayfa değişikliği
+
+
+
+//10 saniyede bir sayfa yeniler
+setInterval(() => {
+    //window.location.reload()
+}, 10000);
+
+
+
+//get user geolocation
+navigator.geolocation.getCurrentPosition(showPosition);
+function showPosition(position) {
+    alert("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude);
+}
+
+navigator.language; //browser dilini döner
+
+
+//window.scrollTo(300, 500); //x eksenin 300px y ekseninde 500px scroll eder
+//window.scrollBy(300, 500); //x eksene 300px ekler y eksenine 500px ekler scroll eder
+
+//window.scrollY //ekranın ne kadar scroll edildiğinin bilgisini veriyor
+
+
+window.onscroll = () => {
+    console.log(window.scrollY);
+};
+
+function windowOnResize(x) {
+    console.log(window.innerWidth);
+}
+
+window.addEventListener("resize", windowOnResize); //window resize olduğunda genişlik değiştiğinde windowOnResize fonskyonu çalışır
+
+
+
+//document.getElementById("myDIV").addEventListener("wheel", myFunction);
+
+function myFunction() {
+  this.style.fontSize = "35px";
 }
 
 
+//    event.stopPropagation(); //bir eventden sonra baka event tetiklenecekse o eventin çalışmasını engeller
+
+// event.preventDefault();
+
+
+//event.timeStamp; documan yüklendikten kaç ms sonra bu elementin eventinin tetiklendiğini getirir
 
 
 
+var newAtag=document.createElement("a");
+
+newAtag.innerText="w3schools Aç";
+
+newAtag.setAttribute("href","https://www.w3schools.com");
+newAtag.style.fontSize="100px"
+document.querySelector("footer").appendChild(newAtag);

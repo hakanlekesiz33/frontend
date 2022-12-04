@@ -50,9 +50,7 @@
                 display: none;
             }
 
-            .c-item-02 {
-                 
-            }
+            .c-item-02 {}
 
             .hamburger-menu-icon {
                 display: flex;
@@ -160,5 +158,25 @@
                 display: none;
             }
         }
+    }
+}
+
+.dark-mode {
+    body {
+        background: #000;
+    }
+
+    main {
+        color: #FFF;
+    }
+}
+
+.light-mode {
+    body {
+        background: #f0f0f0;
+    }
+
+    main {
+        color: #000;
     }
 }

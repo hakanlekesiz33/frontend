@@ -115,4 +115,17 @@
   .header-01 .c-wrapper .hamburger-menu-icon {
     display: none;
   }
+}
+.dark-mode body {
+  background: #000;
+}
+.dark-mode main {
+  color: #FFF;
+}
+
+.light-mode body {
+  background: #f0f0f0;
+}
+.light-mode main {
+  color: #000;
 }/*# sourceMappingURL=Header.css.map */
