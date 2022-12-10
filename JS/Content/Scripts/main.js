@@ -673,10 +673,10 @@ function myFunction() {
 
 
 
-var newAtag=document.createElement("a");
+var newAtag=document.createElement("a"); //yeni elemen oluşturduk
 
 newAtag.innerText="w3schools Aç";
 
 newAtag.setAttribute("href","https://www.w3schools.com");
 newAtag.style.fontSize="100px"
-document.querySelector("footer").appendChild(newAtag);
+document.querySelector("footer").appendChild(newAtag); //documana element ekledik

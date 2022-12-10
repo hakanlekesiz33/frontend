@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        Asal sayı olup olmadığına bakalım
+
+        <div>
+            <label for="isPrime">Sayı giriniz:</label>
+            <input type="text" id="isPrime" />
+            <button onclick="checkIsPrime()">Hesapla</button>
+            <div id="isPrimeResult">
+
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 40px;">
+        Çift veya Tek sayı olup olmadığına bakalım
+
+        <div>
+            <label for="isEvenOrOdd">Sayı giriniz:</label>
+            <input type="text" id="isEvenOrOdd" />
+            <button onclick="checkIsEvenOrOdd()">Hesapla</button>
+            <div id="isEvenOrOddResult">
+
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 40px;">
+        Kullanıcı tarafından girilen sayı sıfırdan büyükse pozitif, sıfırdan küçükse negatif, sıfıra eşitse sıfır
+        yazdıran program.
+
+
+        <div>
+            <label for="isPositive">Sayı giriniz:</label>
+            <input onkeyup="checkIsPositive();" type="text" id="isPositive" />
+            <div id="isPositiveResult">
+
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+        Butona tıkladıkça dizi içindeki arkaplan renklerini kullanarak sayfanın arkaplan rengini değiştiren program
+
+
+        <div>
+            <button onclick="toggleBackgroundColor()">Arka plan rengini değiştir</button>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+        getDay() metodunu kullanarak gün ismini ekranda yazdırmak için gerekli script’ i yazalım
+
+
+        <div>
+            <button onclick="getDayString()">Günü getir</button>
+        </div>
+        <div id="getDayStringResult">
+
+        </div>
+    </div>
+
+
+    <div style="margin-top: 40px;">
+        kullanıcıya 10 hak verilerek tahminde bulunmasını istediğini görüyoruz. Eğer Kullanıcı 10 hak sonunda bilemezse
+        mesaj gösteren ya da 10 hak içinde bilirse kaçıncı hakkında bildiğini kullanıcıya bildiren program
+
+
+        <div>
+            <button onclick="Game.Actions.startGame()">Oyuna Başla</button>
+            <button id="guessButton" onclick="Game.Actions.guessValue()" style="display: none;">Tahmin Et</button>
+        </div>
+        <div>
+            <input type="text" id="guessValue" placeholder="(0-100) arası sayı giriniz" style="display: none;">
+        </div>
+        <div id="guessValueResult">
+
+        </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <button onclick="examResultsCalc();">
+            sınav sonuçlarını göster
+        </button>
+        <div id="examResults">
+
+        </div>
+
+    </div>
+
+    <div style="margin-top: 40px;">
+
+        <div>
+            <input type="text" id="vize">
+            <input type="text" id="final">
+            <button onclick="examResultsCalc2();">
+                Hesapla
+            </button>
+        </div>
+
+        <div id="examResults2">
+
+        </div>
+
+    </div>
+    <div id="mouseCoordinates">
+
+    </div>
+
+    <div style="margin-top: 40px;">
+        <div>kullanıcıdan text kutusu içine bir sayı girmesini isteyerek girdiği bu sayının mükemmel sayı olup
+            olmadığını kontrol edeceğiz.
+            Kendisi hariç bütün pozitif bölenlerinin toplamı kendisine eşit olan sayılara mükemmel sayı denir. 6 bir
+            mükemmel sayıdır. Çünkü 6’nın pozitif bölenleri 1,2,3 ve 6’dır. Kendisi hariç diğer bölenlerini toplarsak
+            1+2+3=6 eder.
+        </div>
+
+        <div><input type="text" id="perfectNumber"></div>
+        <div><button onclick="checkIsPerfectNumber();">kontrol et</button></div>
+
+        <div id="isPerfectNumber">
+
+        </div>
+
+    </div>
+
+
+    <script src="Content/Scripts/algoritma.js"></script>
+</body>
+
+</html>
