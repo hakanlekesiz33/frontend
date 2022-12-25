@@ -1,0 +1,132 @@
+/* Common xs1, xs2 */
+@media all and (max-width: 767px) {
+  .section-01 {
+    padding: 48px 0;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-B {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px 0;
+  }
+}
+/* Common sm1, sm2 tablet */
+@media all and (min-width: 768px) and (max-width: 1319px) {
+  .section-01 {
+    padding: 64px 0;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-B {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 24px;
+  }
+}
+@media all and (min-width: 1320px) {
+  .section-01 {
+    padding: 80px 0;
+  }
+  .section-01 .c-wrapper {
+    display: flex;
+  }
+  .section-01 .c-wrapper > .c-item-01 {
+    width: 300px;
+    margin-right: 24px;
+    background: #FFF;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .section-01 .c-wrapper > .c-item-01 .c-item-01-A {
+    margin-bottom: 24px;
+  }
+  .section-01 .c-wrapper > .c-item-01 .c-item-01-A .search-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    background: #F0F0F0;
+    padding-left: 42px;
+  }
+  .section-01 .c-wrapper > .c-item-01 .c-item-01-A svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  .section-01 .c-wrapper > .c-item-01 .c-item-01-B {
+    padding: 8px 8px 24px 8px;
+    border: 1px solid #F0F0F0;
+  }
+  .section-01 .c-wrapper > .c-item-01 .c-item-01-B ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .section-01 .c-wrapper > .c-item-01 .c-item-01-B ul li input {
+    width: 20px;
+    height: 20px;
+  }
+  .section-01 .c-wrapper > .c-item-01 .c-item-01-B ul li label {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+  }
+  .section-01 .c-wrapper > .c-item-02 {
+    flex: 1;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-A {
+    display: flex;
+    margin-bottom: 48px;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-A .clear-button {
+    display: none;
+    padding: 16px;
+    background-color: #FFF;
+    border: 1px solid red;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-A .clear-button:hover {
+    background-color: #CCC;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-A .clear-button.show {
+    display: flex;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-A .sort-select-container {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-A .sort-select-container .sort-select {
+    padding: 8px;
+    height: 40px;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-A .sort-select-container .sort-select option {
+    padding: 8px;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-B {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px 32px;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-C {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-C button {
+    background: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 24px;
+    padding: 16px;
+    opacity: 0.8;
+    transition: opacity 0.25s;
+    cursor: pointer;
+  }
+  .section-01 .c-wrapper > .c-item-02 > .c-item-02-C button:hover {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Section01.css.map */

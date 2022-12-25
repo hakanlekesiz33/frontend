@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      list-style: none;
+    }
+
+    .c-item-02-B {
+      display: flex;
+      margin-right: 10px;
+    }
+
+    .c-item-02-B li {
+      width: 100px;
+    }
+
+    .c-item-02-A li ul {
+      display: flex;
+    }
+
+    .c-item-02-A li ul li {
+      margin-right: 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section-02">
+    <div class="c-wrapper">
+      <div class="c-item-01">
+        <form action="" id="form">
+          <input id="name" type="text" placeholder="Adı:" />
+          <input id="surname" type="text" placeholder="Soyadı:" />
+          <input id="age" type="text" placeholder="Yaşı:" />
+          <input required id="job" type="text" placeholder="Meslek:" />
+          <input required id="weight" type="text" placeholder="Kilo:" />
+          <input required id="size" type="text" placeholder="Boy:" />
+          <input id="submit" type="button" value="Ekle" onclick="Filter.Actions.personAdd()" />
+        </form>
+      </div>
+      <div class="c-item-02">
+        <ul class="c-item-02-A">
+          <li>
+            <ul class="c-item-02-B">
+              <li>Adı Soyad</li>
+              <li>Yaşı</li>
+              <li>Meslek</li>
+              <li>Kilo</li>
+              <li>Boy</li>
+              <li>Düzenle</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="c-item-02-A" id="person-list">
+
+        </ul>
+
+      </div>
+    </div>
+  </section>
+  <script src="Content/Js/projeNew.js"></script>
+</body>
+
+</html>
