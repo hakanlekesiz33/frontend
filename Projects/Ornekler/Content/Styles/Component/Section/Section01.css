@@ -1,0 +1,50 @@
+.section-01 {
+  padding: 100px;
+}
+.section-01 .title-2 ~ .title-4 {
+  color: green;
+}
+.section-01 h3 {
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s, color 0.3s;
+}
+.section-01 h3:hover {
+  transform: translateX(10px);
+  color: red;
+}
+.section-01 .title-1:hover ~ .images-container .img-1 {
+  opacity: 1;
+  transform: scale(1);
+}
+.section-01 .title-2:hover ~ .images-container .img-2 {
+  opacity: 1;
+  transform: scale(1);
+}
+.section-01 .title-3:hover ~ .images-container .img-3 {
+  opacity: 1;
+  transform: scale(1);
+}
+.section-01 .title-4:hover ~ .images-container .img-4 {
+  opacity: 1;
+  transform: scale(1);
+}
+.section-01 .images-container {
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  overflow: hidden;
+}
+.section-01 .images-container img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s;
+  position: absolute;
+  transform: scale(1.2);
+}/*# sourceMappingURL=Section01.css.map */

@@ -1,0 +1,52 @@
+*, *::before, *::after {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    outline: 0;
+    text-rendering: optimizeLegibility;
+}
+
+blockquote {
+    quotes: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+main, header, aside, img {
+    display: block;
+}
+
+// input:not([type=checkbox]):not([type=radio]), textarea, select {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+// }
+
+// input[type=checkbox], input[type=radio] {
+//     position: absolute;
+//     z-index: -100;
+//     opacity: 0;
+// }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield !important; /* Firefox */
+}
+
+hr {
+    height: 0
+}

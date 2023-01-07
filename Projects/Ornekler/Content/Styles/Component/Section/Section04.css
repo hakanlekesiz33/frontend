@@ -1,0 +1,12 @@
+.section-04 a {
+  color: #000;
+}
+.section-04 a.active {
+  color: red;
+}
+.section-04 div {
+  display: none;
+}
+.section-04 div.on {
+  display: block;
+}/*# sourceMappingURL=Section04.css.map */

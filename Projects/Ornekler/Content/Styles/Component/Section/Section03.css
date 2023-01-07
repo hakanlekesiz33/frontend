@@ -1,0 +1,34 @@
+.section-03 {
+  margin: 100px 0;
+}
+.section-03 .c-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.section-03 .c-wrapper .empty {
+  height: 300px;
+}
+.section-03 .c-wrapper a {
+  height: 300px;
+}
+.section-03 .c-wrapper a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-03 .c-wrapper a::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(180deg, #FF0000 0%, rgba(255, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.section-03 .c-wrapper a:hover::after {
+  opacity: 1;
+}/*# sourceMappingURL=Section03.css.map */

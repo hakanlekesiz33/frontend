@@ -1,0 +1,22 @@
+﻿@import "../../Base/Global.scss";
+@import "../../Base/Colour.scss";
+
+
+
+.section-02 {
+    .c-wrapper{
+        padding: 20px;
+        display: flex;
+        .aside-left{
+            height: 500px;
+            width: 200px;
+            background-color: blue;
+            position: sticky;
+            top: 10px;
+
+        }
+        .content{
+            flex: 1;
+        }
+    }
+}

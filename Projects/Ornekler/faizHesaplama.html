@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="amount" onkeyup="amountOnChange(this);" placeholder="Tutar Giriniz">
+
+    <select id="vade">
+        <option value="">Seçiniz</option>
+        <option value="0.5">6 Ay</option>
+        <option value="1">12 Ay</option>
+        <option value="2">24 Ay</option>
+        <option value="3">36 Ay</option>
+    </select>
+
+    <button onclick="calculate()">Hesapla</button>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+        function amountOnChange(sender) {
+            var amount = Number(sender.value);
+            if (amount > 100000) {
+                document.querySelector("#vade").value = "";
+                document.querySelector("#vade option[value='2']").display = "none";
+                document.querySelector("#vade option[value='3']").display = "none";
+            }
+            else {
+                document.querySelector("#vade option[value='2']").display = "block";
+                document.querySelector("#vade option[value='3']").display = "block";
+            }
+
+            if (amount<1000) {
+                document.querySelector("button").style.display="none"
+            }
+            else{
+                document.querySelector("button").style.display="block"
+            }
+        }
+        function calculate(params) {
+            // 10000(anapara) x 0,10(yıllık faiz) x 0,5(1/2 yıl)=500
+            var faizOrani = 0.22; //yıllık faiz oranı
+
+            var anapara = Number(document.getElementById("amount").value);
+            var vade = Number(document.getElementById("vade").value);
+
+            if (vade * 12 > 12) {
+                faizOrani = 0.33;
+            }
+            else if (vade * 12 > 24) {
+                faizOrani = 0.44;
+            }
+
+            var toplamFaiz = anapara * faizOrani * vade;
+            var result = (anapara + toplamFaiz).toLocaleString('tr-TR', {
+                style: 'currency',
+                currency: 'TRY',
+            });
+
+            var aylik = ((anapara + toplamFaiz) / (vade * 12)).toLocaleString('tr-TR', {
+                style: 'currency',
+                currency: 'TRY',
+            });
+
+
+            document.getElementById("result").innerHTML = "Toplam Ödenecek Tutar= " + result + "<br/>" + "Aylık Ödenecek Tutar= " + aylik;
+
+        }
+    </script>
+</body>
+
+</html>

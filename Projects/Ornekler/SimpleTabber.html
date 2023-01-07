@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Content/Styles/Base.css">
+</head>
+
+<body>
+
+    <section class="section-04">
+        <a href="#" class="active" onclick="changeTabber(this,'x')">2019</a>
+        <a href="#" onclick="changeTabber(this,'y')">2020</a>
+        <a href="#" onclick="changeTabber(this,'z')">2021</a>
+
+        <div id="x" class="on">
+            2019 İçeriği
+        </div>
+        <div id="y">
+            2020 İçeriği
+        </div>
+        <div id="z">
+            2021 İçeriği
+        </div>
+
+    </section>
+
+    <script>
+
+        function changeTabber(sender,targetId) {
+            document.querySelector(".active").classList.remove("active");
+            document.querySelector(".on").classList.remove("on");
+
+            sender.classList.add("active");
+ 
+            document.getElementById(targetId).classList.add("on");
+
+        }
+
+    </script>
+</body>
+
+</html>

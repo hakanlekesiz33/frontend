@@ -1,0 +1,22 @@
+﻿@import "../../Base/Global.scss";
+@import "../../Base/Colour.scss";
+
+
+
+.section-04 {
+
+    a {
+        color: #000;
+
+        &.active {
+            color: red;
+        }
+    }
+
+    div {
+        display: none;
+        &.on{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.section-02 .c-wrapper {
+  padding: 20px;
+  display: flex;
+}
+.section-02 .c-wrapper .aside-left {
+  height: 500px;
+  width: 200px;
+  background-color: blue;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+.section-02 .c-wrapper .content {
+  flex: 1;
+}/*# sourceMappingURL=Section02.css.map */
