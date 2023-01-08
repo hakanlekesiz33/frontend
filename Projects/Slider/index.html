@@ -1,0 +1,302 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Content/Styles/swiper-bundle.min.css" />
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 50px 0 0 0;
+        }
+
+        .swiper {
+            width: 500px;
+            height: 600px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .swiper-slide h3 {
+            font-size: 36px;
+            color: red;
+            margin-bottom: 16px;
+
+        }
+
+        .swiper-slide p {
+            font-size: 20px;
+            color: blue;
+        }
+
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: #007aff;
+        }
+
+        .swiper-button-prev {
+            top: 44px;
+            left: 47%;
+            transform: rotate(90deg);
+        }
+
+        .swiper-button-next {
+            bottom: 0;
+            top: auto;
+            transform: rotate(90deg);
+            right: 47%;
+        }
+
+        #activeSlideNo {
+            position: fixed;
+            right: 200px;
+            top: 50px;
+
+        }
+
+        #customNav {
+            position: fixed;
+            right: 200px;
+            top: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-index="1">
+                <img src="Content/img/1.png" alt="">
+                <div>
+                    <h3>Başlık</h3>
+                    <p>Açıklama</p>
+                </div>
+
+            </div>
+            <div class="swiper-slide" data-index="2">
+                <img src="Content/img/2.png" alt="">
+                <div>
+                    <h3>asdasd</h3>
+                    <p>adada </p>
+                </div>
+
+            </div>
+            <div class="swiper-slide" data-index="3">
+                <img src="Content/img/3.png" alt="">
+                <div>
+                    <h3>Başlık ada</h3>
+                    <p>Açıklama ada</p>
+                </div>
+
+            </div>
+            <div class="swiper-slide" data-index="4">
+                <img src="Content/img/4.png" alt="">
+                <div>
+                    <h3>Başlık</h3>
+                    <p>Açıklama</p>
+                </div>
+            </div>
+            <div class="swiper-slide" data-index="5">
+                <img src="Content/img/1.png" alt="">
+                <div>
+                    <h3>Başlık</h3>
+                    <p>Açıklama</p>
+                </div>
+
+            </div>
+            <div class="swiper-slide" data-index="6">
+                <img src="Content/img/2.png" alt="">
+                <div>
+                    <h3>Başlık</h3>
+                    <p>Açıklama</p>
+                </div>
+
+            </div>
+            <div class="swiper-slide" data-index="7">
+                <img src="Content/img/3.png" alt="">
+                <div>
+                    <h3>Başlık</h3>
+                    <p>Açıklama</p>
+                </div>
+
+            </div>
+            <div class="swiper-slide" data-index="8">
+                <img src="Content/img/4.png" alt="">
+                <div>
+                    <h3>Başlık</h3>
+                    <p>Açıklama</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <div id="activeSlideNo">
+
+    </div>
+    <div id="customNav">
+        <div>
+            <a href="#" onclick="reset();">reset</a>
+        </div>
+        <div>
+            <a href="#" onclick="next();">Next</a>
+        </div>
+        <div>
+            <a href="#" onclick="before();">Before</a>
+        </div>
+        <div>
+            <a href="#" onclick="goto(1);">Goto 1</a>
+            <a href="#" onclick="goto(2);">Goto 2</a>
+            <a href="#" onclick="goto(5);">Goto 5</a>
+        </div>
+        <div>
+            <a href="#" onclick="add();">Yeni Slide Ekle</a>
+        </div>
+    </div>
+    
+    <div id="slideTemplate" style="display: none;">
+        <div class="swiper-slide" data-index="9">
+            <img src="Content/img/4.png" alt="">
+            <div>
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Content/Js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            loop: true,
+            mousewheel: {
+                invert: false,
+                sensitivity: 2
+            },
+            //breakpoints: {
+            // 0: {
+            //     slidesPerView: 1.5,
+            //     spaceBetween: 20,
+            // },
+            // 768: {
+            //     slidesPerView: 2.5,
+            //     spaceBetween: 40,
+            // },
+            // 1280: {
+            //     slidesPerView: 3,
+            //     spaceBetween: 40,
+            // },
+            //},
+
+            //direction: "vertical",
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            on: {
+                init: (event) => {
+                    console.log(event);
+                    //document.getElementById("activeSlideNo").innerText = event.realIndex
+                },
+                slideChange: (event) => {
+                    document.getElementById("activeSlideNo").innerText = event.realIndex + 1;
+                },
+                doubleClick: (event) => {
+                    alert(event.clickedSlide.getAttribute("data-index"));
+                },
+            },
+        });
+
+        function next() {
+            swiper.slideNext();
+        }
+        function before() {
+            swiper.slidePrev();
+        }
+        function goto(index) {
+            swiper.slideTo(index);
+        }
+        function reset() {
+            swiper.slideReset(5000);
+        }
+        function add() {
+            var newSlideHtml = document.getElementById("slideTemplate").innerHTML;
+            swiper.appendSlide(newSlideHtml);
+        }
+
+    </script>
+</body>
+
+</html>
